@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: lts/gallium
           cache: "yarn"
-          cache-dependency-path: "docroot/themes/custom/drupalastic/yarn.lock"
+          # cache-dependency-path: "docroot/themes/custom/drupalastic/yarn.lock"
 
       - name: Frontend Code Quality
         run: |
