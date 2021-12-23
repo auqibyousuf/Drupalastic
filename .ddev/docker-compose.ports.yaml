@@ -6,5 +6,5 @@ services:
       - "3000:3000"
 networks:
     default:
-        external:
-            name: ddev_default
+        external: true
+        name: ddev_default

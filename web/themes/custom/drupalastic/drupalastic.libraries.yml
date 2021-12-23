@@ -1,0 +1,17 @@
+global:
+  css:
+    theme:
+      dist/components/organisms/scss/global.css: {}
+  js:
+    dist/components/main.js:
+      attributes:
+        type: module
+
+card:
+  css:
+    theme:
+      dist/components/organisms/scss/components/card.css: {}
+# tailwind:
+#   css:
+#     theme:
+#       dist/components/tailwind.css: {}

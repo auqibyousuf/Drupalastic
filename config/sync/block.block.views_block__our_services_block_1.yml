@@ -1,0 +1,29 @@
+uuid: 8f1e7545-7f0f-4d80-a788-287113a6e461
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.our_services
+  module:
+    - system
+    - views
+  theme:
+    - drupalastic
+id: views_block__our_services_block_1
+theme: drupalastic
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:our_services-block_1'
+settings:
+  id: 'views_block:our_services-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
