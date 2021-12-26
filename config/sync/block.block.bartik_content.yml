@@ -1,17 +1,17 @@
-uuid: 1c005d96-8fa1-4eb7-bd0b-2b2ea5b7cae1
+uuid: 8bd6f309-f767-47d2-9e89-1c24c079675b
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - drupalastic
+    - bartik
 _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: drupalastic_content
-theme: drupalastic
+id: bartik_content
+theme: bartik
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

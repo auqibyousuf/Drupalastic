@@ -1,4 +1,4 @@
-uuid: 43c7d0b5-3942-4daf-9381-4d8ea3de3b68
+uuid: 5870d1ca-ecd7-48e4-8b08-00be20bdf177
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - drupalastic
+    - bartik
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: drupalastic_main_menu
-theme: drupalastic
-region: header
-weight: -5
+id: bartik_main_menu
+theme: bartik
+region: primary_menu
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:

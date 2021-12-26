@@ -1,15 +1,15 @@
-uuid: 4a3aaf87-f30f-4502-af06-709e467c15cb
+uuid: 941e47c7-4887-4761-8987-3906437f1153
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
-    - drupalastic
+    - bartik
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: drupalastic_page_title
-theme: drupalastic
+id: bartik_page_title
+theme: bartik
 region: content
-weight: -5
+weight: -50
 provider: null
 plugin: page_title_block
 settings:

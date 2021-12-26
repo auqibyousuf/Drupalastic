@@ -1,4 +1,4 @@
-uuid: fc0243c3-ce69-4a6b-bf48-f570a80a51bb
+uuid: 33edbdf2-9cfe-4043-9935-bb57021d37a4
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - drupalastic
+    - bartik
 _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
-id: drupalastic_footer
-theme: drupalastic
-region: header
+id: bartik_footer
+theme: bartik
+region: footer_fifth
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'

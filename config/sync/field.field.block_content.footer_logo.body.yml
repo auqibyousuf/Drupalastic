@@ -1,0 +1,27 @@
+uuid: 3fcfcd36-fea5-4e5d-83bb-9f7b5593093f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_logo
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.footer_logo.body
+field_name: body
+entity_type: block_content
+bundle: footer_logo
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>Pro eu apeirian suavitate dissentiet, qui dicunt ancillae id, ne mea homero persequeris.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

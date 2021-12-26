@@ -1,17 +1,17 @@
-uuid: 1c005d96-8fa1-4eb7-bd0b-2b2ea5b7cae1
+uuid: b2ab7e4e-ba16-49d7-8d84-dc08510c83a2
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - drupalastic
+    - seven
 _core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: drupalastic_content
-theme: drupalastic
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: seven_content
+theme: seven
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

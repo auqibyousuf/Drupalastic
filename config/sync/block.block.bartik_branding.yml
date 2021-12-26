@@ -1,15 +1,15 @@
-uuid: 140a6e89-fac2-4fed-a861-ebf9b8144421
+uuid: f7188f26-9cf0-4cf1-9eb9-81cfd4974b67
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - drupalastic
+    - bartik
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: drupalastic_branding
-theme: drupalastic
+id: bartik_branding
+theme: bartik
 region: header
 weight: 0
 provider: null
