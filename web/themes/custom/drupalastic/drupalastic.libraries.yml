@@ -2,8 +2,10 @@ global:
   css:
     theme:
       dist/components/organisms/scss/global.css: {}
+      dist/components/organisms/scss/components/menu.css: {}
   js:
     dist/components/main.js:
+    dist/components/organisms/navtoggle.js:
       attributes:
         type: module
 

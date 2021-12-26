@@ -1,0 +1,102 @@
+@import '../config.all';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--c-primary);
+  height: 115px;
+  position: relative;
+  margin-bottom: -55px;
+}
+
+.nav {
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.nav-logo {
+  margin-left: 135px;
+  position: relative;
+  bottom: 2em;
+
+  img {
+    height: 28px;
+    width: 100px;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  @include list-clear;
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 14px;
+  justify-content: flex-end;
+  font-family: var(--f-primary);
+
+  &__item {
+    padding: 5px;
+
+    a {
+      color: var(--c-white);
+      @include text();
+      @include link-clear();
+      @include list-clear();
+      font-weight: 900;
+      margin: 1em;
+    }
+  }
+
+  &__item:last-child {
+    border: 1px solid var(--c-white-50);
+    border-radius: 5px;
+    width: 170px;
+    line-height: 2;
+    height: 48px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: -5px;
+    padding: 7px;
+  }
+}
+
+@include breakpoint($tablet) {
+  @include navbar;
+}
+
+.hamburger {
+  display: none;
+  margin-top: 1em;
+  position: relative;
+  outline: none;
+  z-index: 999;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffff;
+}
+
+@include breakpoint($tablet) {
+  @include hamburger;
+  .hamburger {
+    margin-left: 40em !important;
+  }
+}
+
+@include breakpoint($mobile) {
+  @include navbar;
+}
+@include breakpoint($mobile) {
+  @include hamburger;
+  .hamburger {
+    margin-left: 20em;
+  }
+}
