@@ -33,27 +33,27 @@
 #}
 {% set heading_id = attributes.id ~ ('-menu'|clean_id) %}
 <div class="header">
-	<nav role="navigation" class="nav" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby') }}>
-		{# Label. If not displayed, we still provide it for screen readers. #}
-		{% if not configuration.label_display %}
-			{% set title_attributes = title_attributes.addClass('visually-hidden') %}
-		{% endif %}
-		{{ title_prefix }}
-		<h2 {{ title_attributes.setAttribute('id', heading_id) }}>
-			{{ configuration.label }}
-		</h2>
-		{{ title_suffix }}
+  <nav role="navigation" class="nav" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby') }}>
+    {# Label. If not displayed, we still provide it for screen readers. #}
+    {% if not configuration.label_display %}
+      {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+    {% endif %}
+    {{ title_prefix }}
+    <h2 {{ title_attributes.setAttribute('id', heading_id) }}>
+      {{ configuration.label }}
+    </h2>
+    {{ title_suffix }}
 
-		{# Menu. #}
-		{% block content %}
-			{{ content }}
-		{% endblock %}
+    {# Menu. #}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
 
-	<div class="hamburger">
-		<span class="hamburger-bar hamburger--active"></span>
-		<span class="hamburger-bar hamburger--active"></span>
-		<span class="hamburger-bar hamburger--active"></span>
-	</div>
-	</nav>
+  <div class="hamburger">
+    <span class="hamburger-bar hamburger--active"></span>
+    <span class="hamburger-bar hamburger--active"></span>
+    <span class="hamburger-bar hamburger--active"></span>
+  </div>
+  </nav>
 </div>
 
