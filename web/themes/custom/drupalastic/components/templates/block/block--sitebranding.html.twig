@@ -14,10 +14,10 @@
  */
 #}
 {% block content %}
-	{% if site_logo %}
-		<a href="{{ path('<front>') }}" rel="home" class="nav-logo">
-			<img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
-		</a>
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" rel="home" class="nav-logo">
+		  <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
+	  </a>
 	{% endif %}
 	{% if site_name %}
 		<a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
