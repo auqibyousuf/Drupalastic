@@ -11,6 +11,9 @@ global:
       attributes:
         type: module
 
+iconify:
+    js:
+      //code.iconify.design/2/2.1.0/iconify.min.js: { type: external }
 card:
   css:
     theme:
