@@ -1,8 +1,0 @@
-uuid: 9eee390a-204a-4341-ab83-e25b69a03d5a
-langcode: en
-status: true
-dependencies: {  }
-id: social-links
-label: 'Social Links'
-description: 'footer social'
-locked: false
