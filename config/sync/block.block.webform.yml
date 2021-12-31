@@ -1,4 +1,4 @@
-uuid: d505996a-0857-4305-ba06-b7709b8ef31a
+uuid: 61ab0f8a-5bbf-42c3-94b2-02e73616f1c8
 langcode: en
 status: true
 dependencies:
@@ -11,14 +11,14 @@ dependencies:
 id: webform
 theme: drupalastic
 region: content
-weight: -3
+weight: 0
 provider: null
 plugin: webform_block
 settings:
   id: webform_block
-  label: Webform
+  label: 'Contact Us'
   provider: webform
-  label_display: '0'
+  label_display: visible
   webform_id: contact
   default_data: ''
   redirect: false

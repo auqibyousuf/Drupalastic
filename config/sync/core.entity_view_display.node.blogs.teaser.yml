@@ -10,10 +10,10 @@ dependencies:
     - field.field.node.blogs.field_categories
     - field.field.node.blogs.field_desc
     - field.field.node.blogs.field_image
-    - field.field.node.blogs.field_main
+    - field.field.node.blogs.field_main_image
     - field.field.node.blogs.field_preview_image
     - field.field.node.blogs.field_tag
-    - field.field.node.blogs.field_thumb
+    - field.field.node.blogs.field_thumb_image
     - field.field.node.blogs.field_title
     - node.type.blogs
   module:
@@ -58,4 +58,10 @@ hidden:
   field_main: true
   field_tag: true
   field_thumb: true
+  field_body: true
+  field_categories: true
+  field_image: true
+  field_main_image: true
+  field_tag: true
+  field_thumb_image: true
   links: true

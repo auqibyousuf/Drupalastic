@@ -1,16 +1,21 @@
-uuid: 6c718801-b11a-4f10-82fa-5a76124b0ff3
+uuid: 290e6f9f-80f2-4f65-b1ca-d8f21a86f5f6
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
 open: null
 close: null
 weight: 0
-uid: 1
+uid: null
 template: false
 archive: false
 id: contact
 title: Contact
-description: ''
+description: 'Basic email contact webform.'
 category: ''
 elements: |-
   email:
@@ -19,20 +24,20 @@ elements: |-
     '#title_display': none
     '#description_display': invisible
     '#placeholder': Email
+    '#required': true
     '#attributes':
       class:
         - form__email
-    '#required': true
   message:
     '#type': textarea
     '#title': Message
     '#title_display': none
-    '#description_display': invisible
     '#placeholder': Message
+    '#required': true
     '#attributes':
       class:
         - form__message
-    '#required': true
+    '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -40,7 +45,6 @@ elements: |-
     '#submit__attributes':
       class:
         - form__submit
-    '#update_hide': true
 css: ''
 javascript: ''
 settings:
@@ -53,7 +57,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -143,10 +147,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: ''
-  confirmation_url: ''
+  confirmation_message: 'Your message has been sent.'
+  confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -222,5 +226,79 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email_confirmation:
+    id: email
+    label: 'Email confirmation'
+    notes: ''
+    handler_id: email_confirmation
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[current-user:mail]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  email_notification:
+    id: email
+    label: 'Email notification'
+    notes: ''
+    handler_id: email_notification
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
 variants: {  }

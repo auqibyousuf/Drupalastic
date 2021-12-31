@@ -9,10 +9,10 @@ dependencies:
     - field.field.node.blogs.field_categories
     - field.field.node.blogs.field_desc
     - field.field.node.blogs.field_image
-    - field.field.node.blogs.field_main
+    - field.field.node.blogs.field_main_image
     - field.field.node.blogs.field_preview_image
     - field.field.node.blogs.field_tag
-    - field.field.node.blogs.field_thumb
+    - field.field.node.blogs.field_thumb_image
     - field.field.node.blogs.field_title
     - image.style.thumbnail
     - node.type.blogs
@@ -21,6 +21,7 @@ dependencies:
     - link
     - path
     - text
+    - path
 id: node.blogs.default
 targetEntityType: node
 bundle: blogs
@@ -57,6 +58,13 @@ content:
       show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
+  field_body:
+    weight: 128
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_categories:
     weight: 129
@@ -85,6 +93,7 @@ content:
     type: image_image
     region: content
   field_main:
+  field_main_image:
     weight: 126
     settings:
       progress_indicator: throbber
