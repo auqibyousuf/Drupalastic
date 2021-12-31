@@ -1,0 +1,18 @@
+uuid: fa014c5c-c59f-4338-b47e-5246bcad5a20
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Contact us'
+type: contact_us
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

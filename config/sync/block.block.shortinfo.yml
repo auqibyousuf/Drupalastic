@@ -1,0 +1,25 @@
+uuid: 3c8739ba-c418-45c9-9035-6b9a5e175366
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:21aeb09e-0079-4add-b7dc-3e2f5cd218f8'
+  module:
+    - block_content
+  theme:
+    - drupalastic
+id: shortinfo
+theme: drupalastic
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:21aeb09e-0079-4add-b7dc-3e2f5cd218f8'
+settings:
+  id: 'block_content:21aeb09e-0079-4add-b7dc-3e2f5cd218f8'
+  label: 'Short info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

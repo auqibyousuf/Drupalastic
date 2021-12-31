@@ -1,0 +1,22 @@
+uuid: 027741d6-3236-4b53-95b9-f1bd7936d7b7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalastic
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: drupalastic_local_tasks
+theme: drupalastic
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
