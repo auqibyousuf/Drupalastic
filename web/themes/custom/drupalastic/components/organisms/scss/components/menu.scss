@@ -20,7 +20,12 @@
 }
 .nav-logo {
   position: relative;
-  bottom: 1.5em;
+  bottom: 2em;
+  @include breakpoint($desktop) {
+    @include container;
+    left: 230px;
+  }
+
   img {
     height: 28px;
     width: 100px;

@@ -1,0 +1,326 @@
+@import '../config.all';
+
+.container {
+  background: var(--c-background);
+}
+
+.blogs-container {
+  padding-top: 50px;
+  @include breakpoint($desktop) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  @include breakpoint($mobile) {
+    display: block;
+    padding-right: 16px;
+    padding-top: 50px;
+    padding-left: 16px;
+  }
+  @include breakpoint($tablet) {
+    display: block;
+  }
+}
+
+.blogs {
+  @include breakpoint($mobile) {
+  }
+  @include breakpoint($tablet) {
+    display: block;
+    position: relative;
+  }
+  &__link {
+    padding-bottom: 40px;
+    color: var(--c-background);
+    a {
+      @include link-clear;
+      color: var(--c-black-50);
+    }
+  }
+  &__image {
+    img {
+      border-radius: 10px;
+      @include breakpoint($mobile) {
+        width: 345px;
+      }
+      @include breakpoint($tablet) {
+        width: 100%;
+      }
+    }
+  }
+  &__title {
+    font-size: 72px;
+    font-family: var(--f-secondary);
+    line-height: 80px;
+    width: 674px;
+    height: 160px;
+    margin-top: 24px;
+    @include breakpoint($mobile) {
+      width: 310px;
+      font-size: 55px;
+    }
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
+  }
+  &__body {
+    width: 835px;
+    color: var(--c-black-50);
+    @include breakpoint($mobile) {
+      width: 100%;
+      position: relative;
+      top: 10em;
+      :nth-child(1) {
+        padding-bottom: 10px;
+        padding-top: 0px;
+      }
+    }
+
+    @include breakpoint($tablet) {
+      top: 0;
+    }
+
+    :nth-child(1) {
+      padding-bottom: 10px;
+      padding-top: 40px;
+      @include breakpoint($mobile) {
+        padding-top: 5px;
+      }
+    }
+    :nth-child(2) {
+      padding-bottom: 40px;
+      padding-top: 0;
+      @include breakpoint($mobile) {
+        padding-top: 0;
+        padding-bottom: 40px;
+      }
+      @include breakpoint($tablet) {
+        padding-bottom: 10px;
+      }
+    }
+    :nth-child(3) {
+      width: 835px;
+      height: 113px;
+      font-size: 20px;
+      padding-left: 24px;
+      padding-bottom: 40px;
+      line-height: 32px;
+      color: var(--c-black);
+      position: relative;
+      @include breakpoint($mobile) {
+        width: 310px;
+        height: 250px;
+      }
+      @include breakpoint($tablet) {
+        width: 100%;
+        padding-bottom: 10px;
+        height: 100px;
+      }
+    }
+
+    :nth-child(3):after {
+      content: '';
+      height: 96px; //You can change this if you want smaller/bigger borders
+      width: 6px;
+      border-radius: 5px;
+      left: 0;
+      position: absolute;
+      top: 0; // If you want to set a smaller height and center it, change this value
+      background-color: var(--c-secondary-light);
+
+      @include breakpoint($mobile) {
+        height: 250px;
+      }
+      @include breakpoint($tablet) {
+        height: 100px;
+      }
+    }
+
+    :nth-child(4) {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      @include breakpoint($mobile) {
+        padding-bottom: 50px;
+      }
+      @include breakpoint($tablet) {
+        padding-bottom: 0px;
+      }
+    }
+  }
+
+  &__cat-taxanomy {
+    padding-top: 40px;
+    a {
+      @include link-clear;
+      font-weight: bold;
+      color: var(--c-black);
+    }
+  }
+
+  &__tag-taxanomy {
+    padding: 5px;
+    border: 1px solid var(--c-primary);
+    width: 66px;
+    height: 32px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    @include breakpoint($mobile) {
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+    @include breakpoint($tablet) {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.blogs-sidebar {
+  position: relative;
+  padding: 20px;
+  right: 4.5em;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
+  &__search {
+    input[type='search'] {
+      width: 250px;
+      @extend %input;
+    }
+    input[type='submit'] {
+      display: none;
+    }
+  }
+
+  &__cat {
+    margin-top: 50px;
+    position: relative;
+    right: 6em;
+    top: 4em;
+    h2 {
+      width: 300px;
+      border-bottom: 1px solid var(--c-grey-light);
+      a {
+        margin-top: 24px;
+        width: 30px;
+        padding: 10px 0;
+        display: block;
+        color: var(--c-black);
+        font-weight: bold;
+      }
+    }
+    @include breakpoint($mobile) {
+      padding: 0;
+      padding-bottom: 60px;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+//Subscribe
+
+.subscribe {
+  &__section {
+    display: flex;
+    height: 350px;
+    background: var(--c-secondary-light);
+    align-items: center;
+    justify-content: space-around;
+
+    @include breakpoint($mobile) {
+      display: block;
+      padding: 30px 0px 0px 16px;
+      height: 480px;
+    }
+  }
+  &__text {
+    padding-right: 85px;
+    @include breakpoint($mobile) {
+      width: 200px;
+      height: 115px;
+      padding: 0;
+    }
+  }
+  &__heading {
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding-bottom: 18px;
+    @include breakpoint($mobile) {
+      padding-top: 30px;
+    }
+  }
+  &__subheading {
+    font-family: var(--f-secondary);
+    font-size: 56px;
+    line-height: 64px;
+    width: 510px;
+    @include breakpoint($mobile) {
+      font-size: 40px;
+      height: 150px;
+      width: 210px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    right: 20em;
+    top: 1em;
+    input[type='submit'] {
+      width: 178px;
+      height: 48px;
+      border-radius: 5px;
+      background: var(--c-primary);
+      color: var(--c-white);
+      border: 1px solid rgba(255, 0.255, 0.255, 0.1);
+      position: relative;
+      left: 26em;
+      bottom: 3em;
+      @include breakpoint($mobile) {
+        left: 2em;
+        top: 1em;
+      }
+    }
+    @include breakpoint($mobile) {
+      top: 12em;
+      right: 2em;
+    }
+  }
+  &__email {
+    @extend %input;
+    width: 370px;
+
+    @include breakpoint($mobile) {
+      width: 346px;
+      margin-left: 2em;
+    }
+  }
+}
+
+//Author
+
+.blogs-author {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 63em;
+  @include breakpoint($mobile) {
+    top: 48em;
+  }
+  @include breakpoint($tablet) {
+    top: 40em;
+  }
+
+  &__image {
+    border-radius: 60px;
+    width: 32px;
+    height: 32px;
+  }
+  &__name {
+    padding-left: 16px;
+  }
+}
