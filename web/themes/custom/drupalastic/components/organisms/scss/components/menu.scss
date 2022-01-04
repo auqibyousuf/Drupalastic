@@ -1,44 +1,52 @@
 @import '../config.all';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .header {
   background-color: var(--c-primary);
-  height: 115px;
+  height: 100px;
   position: relative;
-  margin-bottom: -55px;
+  margin-bottom: -3.2em;
+  top: -1em;
+  @include breakpoint($mobile) {
+    top: 0;
+  }
 }
 
 .nav {
   align-items: center;
   padding: 1rem 1.5rem;
+  @include breakpoint($desktop) {
+    @include container;
+  }
 }
 .nav-logo {
-  margin-left: 135px;
   position: relative;
   bottom: 2em;
+  @include breakpoint($desktop) {
+    @include container;
+    left: 230px;
+  }
 
   img {
     height: 28px;
     width: 100px;
   }
+  @include breakpoint($mobile) {
+    padding-left: 1em;
+    bottom: 0.75em;
+  }
 }
 
 .nav-menu {
   display: flex;
-  @include list-clear;
-  margin-top: 0px;
-  padding: 10px;
-  font-size: 14px;
+  list-style: none;
+  padding-top: 30px;
+  align-items: center;
   justify-content: flex-end;
+  font-size: 14px;
   font-family: var(--f-primary);
 
   &__item {
-    padding: 5px;
+    padding: 8px;
 
     a {
       color: var(--c-white);
