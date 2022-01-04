@@ -1,0 +1,25 @@
+uuid: 00baca6f-965f-41e3-829e-8b99165ee777
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:gmap:3f019812-ed6b-42ee-8470-b65ce35d2e90'
+  module:
+    - block_content
+  theme:
+    - drupalastic
+id: gmap
+theme: drupalastic
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:3f019812-ed6b-42ee-8470-b65ce35d2e90'
+settings:
+  id: 'block_content:3f019812-ed6b-42ee-8470-b65ce35d2e90'
+  label: Gmap
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

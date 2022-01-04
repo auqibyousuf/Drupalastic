@@ -1,9 +1,4 @@
 @mixin navbar {
-  .nav-logo {
-    position: absolute;
-    bottom: 1em;
-    margin-left: 3em;
-  }
   .nav-menu {
     z-index: 10;
     position: fixed;

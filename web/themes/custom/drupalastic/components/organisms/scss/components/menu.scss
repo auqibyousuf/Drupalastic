@@ -20,26 +20,29 @@
 }
 .nav-logo {
   position: relative;
-  bottom: 2em;
-  @include breakpoint($desktop) {
-    @include container;
-    left: 230px;
-  }
-
+  bottom: 1.5em;
   img {
     height: 28px;
     width: 100px;
   }
+  @include breakpoint($desktop) {
+    @include container;
+    left: 230px;
+  }
   @include breakpoint($mobile) {
     padding-left: 1em;
-    bottom: 0.75em;
+    bottom: 1em;
+  }
+  @include breakpoint($tablet) {
+    bottom: 1.75em !important;
+    left: 3em;
   }
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  padding-top: 30px;
+  padding-top: 35px;
   align-items: center;
   justify-content: flex-end;
   font-size: 14px;
@@ -96,6 +99,7 @@
   @include hamburger;
   .hamburger {
     margin-left: 40em !important;
+    top: 0;
   }
 }
 
@@ -106,5 +110,6 @@
   @include hamburger;
   .hamburger {
     margin-left: 20em;
+    top: 0;
   }
 }

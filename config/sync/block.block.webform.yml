@@ -1,0 +1,25 @@
+uuid: d505996a-0857-4305-ba06-b7709b8ef31a
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - webform
+  theme:
+    - drupalastic
+id: webform
+theme: drupalastic
+region: content
+weight: -3
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility: {  }

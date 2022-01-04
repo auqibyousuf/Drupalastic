@@ -1,4 +1,5 @@
 @import '../config.all';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +9,6 @@
   @include list-clear;
   font-size: 16px;
 }
-
 .divider {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
@@ -24,10 +24,24 @@
   }
 }
 
-.footer {
+.footer-container {
   background: #f2f2f2;
+  padding: 15px;
+}
+.footer {
+  &__blogs-block {
+    margin-left: 2px;
+  }
+  @include breakpoint($mobile) {
+    position: relative;
+    left: -4em;
+  }
+  @include breakpoint($desktop) {
+    justify-content: space-evenly;
+    padding-top: 70px !important;
+  }
+  @include container;
   display: flex;
-  padding: 70px;
 
   &__logo {
     width: 350px;
@@ -35,10 +49,10 @@
   }
   &__logo__menu {
     display: flex;
-  }
-
-  &__left-block {
-    margin-left: 150px;
+    margin-left: -20px;
+    @include breakpoint($mobile) {
+      margin-left: 0;
+    }
   }
 
   @include breakpoint($tablet) {
@@ -54,7 +68,7 @@
       display: flex !important;
     }
     &__created {
-      margin-right: 0 !important;
+      margin-right: 10em !important;
     }
     &__blogs-block {
       margin-top: 20px;
@@ -82,8 +96,10 @@
 
   &-social {
     a[href*='facebook'] {
-      background-image: url('../../images/facebook.png');
+      background-image: url(/themes/custom/drupalastic/images/facebook.png);
       color: rgba(0, 0, 0, 0.5);
+      background-repeat: no-repeat;
+      background-position: center;
     }
     a[href*='instagram'] {
       color: rgba(0, 0, 0, 0.5);
@@ -101,16 +117,21 @@
     @include breakpoint($mobile) {
       margin-bottom: 72px;
       margin-top: 80px;
+      margin-left: 48px;
     }
 
     @include breakpoint($tablet) {
       margin-top: 0px;
+      width: 10%;
     }
   }
 
   &__aperiri-menu {
-    margin-left: 150px;
-    margin-right: 200px;
+    margin-left: 200px;
+    margin-right: 150px;
+    @include breakpoint($mobile) {
+      margin-left: 100px;
+    }
   }
 
   &__blog {
@@ -140,15 +161,16 @@
     background: #f2f2f2;
     display: flex;
     padding-bottom: 30px;
+    justify-content: space-around;
     padding-top: 27px;
-    padding-left: 220px;
   }
   &__created {
-    margin-right: 787px;
+    margin-right: 22em;
     color: rgba(0, 0, 0, 0.5);
   }
   &__copyright {
     color: rgba(0, 0, 0, 0.5);
+    margin-right: 5em;
   }
 
   &-social__list {
@@ -165,17 +187,14 @@
       display: block;
     }
     &__left-block {
-      margin-left: 10px;
-    }
-    &__menu-block {
-      display: flex;
+      margin-left: 50px;
     }
 
     &__blog {
       padding-left: 0;
     }
     &__blogs-block {
-      width: 357px;
+      padding-left: 3em;
     }
 
     &__blog-block {
@@ -192,18 +211,12 @@
     }
 
     &__secondary {
-      padding-left: 0;
       display: block;
-      width: 100%;
-      margin-right: 0;
     }
 
     &__created,
     &__copyright {
       width: 100%;
-      line-height: 24px;
-      margin-bottom: 10px;
-      padding-left: 15px;
     }
   }
 }

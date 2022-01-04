@@ -3,15 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blogs.field_backlink
+    - field.field.node.blogs.field_blog_title
+    - field.field.node.blogs.field_body
+    - field.field.node.blogs.field_categories
     - field.field.node.blogs.field_desc
     - field.field.node.blogs.field_image
+    - field.field.node.blogs.field_main
     - field.field.node.blogs.field_preview_image
+    - field.field.node.blogs.field_tag
+    - field.field.node.blogs.field_thumb
     - field.field.node.blogs.field_title
     - image.style.thumbnail
     - node.type.blogs
   module:
     - image
+    - link
     - path
+    - text
 id: node.blogs.default
 targetEntityType: node
 bundle: blogs
@@ -23,6 +32,42 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_backlink:
+    weight: 131
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_blog_title:
+    weight: 132
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_body:
+    weight: 128
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_categories:
+    weight: 129
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_desc:
     weight: 125
     settings:
@@ -39,8 +84,34 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_main:
+    weight: 126
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_preview_image:
     weight: 123
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tag:
+    weight: 130
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_thumb:
+    weight: 127
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

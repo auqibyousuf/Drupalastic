@@ -1,0 +1,8 @@
+uuid: 640a33a8-4abd-4cb3-abb9-87de5ce23523
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'For creating categories'
+weight: 0

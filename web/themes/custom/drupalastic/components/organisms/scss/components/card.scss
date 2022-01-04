@@ -43,10 +43,18 @@
 // Individual card
 .card:not(:last-child) {
   margin-bottom: 16px;
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
 
   @include breakpoint($desktop) {
     margin-right: 20px;
     margin-bottom: 0;
+  }
+}
+.card:last-child {
+  @include breakpoint($tablet) {
+    width: 160%;
   }
 }
 

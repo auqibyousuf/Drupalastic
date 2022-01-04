@@ -1,0 +1,33 @@
+uuid: d16af608-7e15-411e-93db-b9775dc9a003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_text.body
+    - field.field.node.basic_text.field_subtitle
+    - node.type.basic_text
+  module:
+    - text
+    - user
+id: node.basic_text.default
+targetEntityType: node
+bundle: basic_text
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  links: true

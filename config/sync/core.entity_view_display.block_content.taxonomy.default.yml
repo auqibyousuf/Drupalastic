@@ -1,0 +1,21 @@
+uuid: 99a2d66b-7982-4329-866e-0b2f3835f16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.taxonomy
+    - field.field.block_content.taxonomy.field_categories
+id: block_content.taxonomy.default
+targetEntityType: block_content
+bundle: taxonomy
+mode: default
+content:
+  field_categories:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

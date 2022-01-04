@@ -1,0 +1,33 @@
+uuid: 6f1f0441-1520-4253-b4b9-4556855b64c8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:author_block:d6662f97-6b25-4a94-bd33-7eccda913924'
+  module:
+    - block_content
+    - node
+  theme:
+    - drupalastic
+id: author
+theme: drupalastic
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:d6662f97-6b25-4a94-bd33-7eccda913924'
+settings:
+  id: 'block_content:d6662f97-6b25-4a94-bd33-7eccda913924'
+  label: Author
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blogs: blogs
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

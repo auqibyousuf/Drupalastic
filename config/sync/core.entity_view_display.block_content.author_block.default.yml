@@ -1,0 +1,32 @@
+uuid: 09947e82-48dd-4f91-9990-75db19e5d423
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.author_block
+    - field.field.block_content.author_block.field_image
+    - field.field.block_content.author_block.field_name
+  module:
+    - image
+id: block_content.author_block.default
+targetEntityType: block_content
+bundle: author_block
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

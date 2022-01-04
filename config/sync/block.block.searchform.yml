@@ -1,0 +1,21 @@
+uuid: fca465a3-99a1-4e9f-847a-a4a950e55711
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drupalastic
+id: searchform
+theme: drupalastic
+region: sidebar
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

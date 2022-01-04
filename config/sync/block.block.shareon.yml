@@ -1,0 +1,33 @@
+uuid: 88a5e3f7-6903-4553-b575-8e4cb0f76a89
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ffdcaef8-6b8b-4b3f-84d3-d9ae5ed88bc8'
+  module:
+    - block_content
+    - node
+  theme:
+    - drupalastic
+id: shareon
+theme: drupalastic
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:ffdcaef8-6b8b-4b3f-84d3-d9ae5ed88bc8'
+settings:
+  id: 'block_content:ffdcaef8-6b8b-4b3f-84d3-d9ae5ed88bc8'
+  label: 'Share on'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blogs: blogs
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

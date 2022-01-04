@@ -1,0 +1,8 @@
+uuid: 0a94658c-c2e4-4ae9-9406-6f8a9a57aa8a
+langcode: en
+status: true
+dependencies: {  }
+id: author_block
+label: 'Author Block'
+revision: 0
+description: 'Here Author Info and Pic Goes'

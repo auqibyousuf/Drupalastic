@@ -1,0 +1,33 @@
+uuid: 2d7b747a-7b1e-412a-9c94-65997f4b1842
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.subscribe
+  module:
+    - node
+    - webform
+  theme:
+    - drupalastic
+id: form_subscribe
+theme: drupalastic
+region: content
+weight: -4
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Subscribe
+  provider: webform
+  label_display: '0'
+  webform_id: subscribe
+  default_data: ''
+  redirect: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blogs: blogs
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

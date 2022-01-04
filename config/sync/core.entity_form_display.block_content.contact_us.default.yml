@@ -1,0 +1,31 @@
+uuid: 93d853f7-ff3f-4eeb-b665-c02e5a283d7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.field.block_content.contact_us.field_contact
+  module:
+    - webform
+id: block_content.contact_us.default
+targetEntityType: block_content
+bundle: contact_us
+mode: default
+content:
+  field_contact:
+    weight: 27
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

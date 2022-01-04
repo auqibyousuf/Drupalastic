@@ -1,0 +1,23 @@
+uuid: 484e4523-f86d-4ff9-8476-44c2dd4e4fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_backlink
+    - node.type.blogs
+  module:
+    - link
+id: node.blogs.field_backlink
+field_name: field_backlink
+entity_type: node
+bundle: blogs
+label: Backlink
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

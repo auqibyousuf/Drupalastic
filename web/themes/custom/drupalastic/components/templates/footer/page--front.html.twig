@@ -53,19 +53,12 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
       {{ page.content.views_block__our_services_block_1 }}
     </div>{# /.layout-content #}
-
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar_first }}
@@ -81,19 +74,17 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer role="contentinfo" class = "footer-container">
   <div class="footer">
   <div class="footer__logo__menu">
       <div class="footer__left-block">
         {{ page.footer.footerlogo }}
         {{ page.footer.shortinfo }}
-
         {{ page.footer.sociallinks }}
       </div>
 
       <div class="footer__menu-block">
         {{ page.footer.causae }}
-
         {{ page.footer.aperiri }}
       </div>
       </div>
