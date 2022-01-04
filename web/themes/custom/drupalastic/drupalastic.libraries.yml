@@ -3,6 +3,7 @@ global:
     theme:
       dist/components/organisms/scss/global.css: {}
       dist/components/organisms/scss/components/menu.css: {}
+      dist/components/organisms/scss/components/footer.css: {}
   js:
     dist/components/main.js:
     dist/components/organisms/navtoggle.js:

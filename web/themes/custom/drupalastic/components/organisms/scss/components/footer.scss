@@ -1,0 +1,213 @@
+@import '../config.all';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--f-primary);
+  @include link-clear;
+  @include list-clear;
+  font-size: 16px;
+}
+
+.divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.menu {
+  padding-top: 10px;
+
+  &__list-item {
+    padding-top: 10px;
+  }
+  &__list-link {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.footer {
+  background: #f2f2f2;
+  display: flex;
+  padding: 70px;
+
+  &__logo {
+    width: 350px;
+    margin-bottom: 23px;
+  }
+  &__logo__menu {
+    display: flex;
+  }
+
+  &__left-block {
+    margin-left: 150px;
+  }
+
+  @include breakpoint($tablet) {
+    &__logo__menu {
+      display: flex !important;
+      margin-top: 0;
+    }
+    &__left-block {
+      margin-left: 20px;
+    }
+
+    &__secondary {
+      display: flex !important;
+    }
+    &__created {
+      margin-right: 0 !important;
+    }
+    &__blogs-block {
+      margin-top: 20px;
+    }
+  }
+
+  &__short-info {
+    line-height: 24px;
+    width: 270px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 130px;
+    margin-bottom: 18px;
+
+    @include breakpoint($mobile) {
+      width: 340px;
+      height: 80px;
+      margin-bottom: 0;
+      height: 80px;
+      margin-right: 35px;
+    }
+    @include breakpoint($tablet) {
+      margin-right: 35px;
+    }
+  }
+
+  &-social {
+    a[href*='facebook'] {
+      background-image: url('../../images/facebook.png');
+      color: rgba(0, 0, 0, 0.5);
+    }
+    a[href*='instagram'] {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__title {
+    color: #000000;
+    font-weight: 700;
+  }
+
+  &__menu-block {
+    display: flex;
+
+    @include breakpoint($mobile) {
+      margin-bottom: 72px;
+      margin-top: 80px;
+    }
+
+    @include breakpoint($tablet) {
+      margin-top: 0px;
+    }
+  }
+
+  &__aperiri-menu {
+    margin-left: 150px;
+    margin-right: 200px;
+  }
+
+  &__blog {
+    display: flex;
+    padding: 10px;
+    padding-bottom: 50px;
+  }
+
+  &__blog-block {
+    padding-left: 30px;
+    height: 48px;
+  }
+  &__blog-desc {
+    color: rgba(0, 0, 0, 0.5);
+    width: 270px;
+  }
+  &__blog-title {
+    width: 72px;
+    height: 24px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  &__secondary {
+    background: #f2f2f2;
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 27px;
+    padding-left: 220px;
+  }
+  &__created {
+    margin-right: 787px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &__copyright {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-social__list {
+    display: flex;
+  }
+
+  @include breakpoint($mobile) {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    padding-top: 72px;
+
+    &__logo__menu {
+      display: block;
+    }
+    &__left-block {
+      margin-left: 10px;
+    }
+    &__menu-block {
+      display: flex;
+    }
+
+    &__blog {
+      padding-left: 0;
+    }
+    &__blogs-block {
+      width: 357px;
+    }
+
+    &__blog-block {
+      width: 257px;
+      padding-left: 18px;
+    }
+
+    &__blog-desc {
+      width: 225px;
+    }
+
+    &__blog-title {
+      display: block;
+    }
+
+    &__secondary {
+      padding-left: 0;
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__created,
+    &__copyright {
+      width: 100%;
+      line-height: 24px;
+      margin-bottom: 10px;
+      padding-left: 15px;
+    }
+  }
+}
+
+.footer:last-child {
+  display: block;
+}
