@@ -45,60 +45,41 @@
 #}
 
 <div class="layout-container">
-
   <header role="banner">
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
     <div class="layout-content">
       {{ page.content.views_block__our_services_block_1 }}
-    </div>{# /.layout-content #}
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
+    </div>
   </main>
 
   {% if page.footer %}
     <footer role="contentinfo" class = "footer-container">
-  <div class="footer">
-  <div class="footer__logo__menu">
-      <div class="footer__left-block">
-        {{ page.footer.footerlogo }}
-        {{ page.footer.shortinfo }}
-        {{ page.footer.sociallinks }}
+      <div class="footer">
+        <div class="footer__logo__menu">
+          <div class="footer__left-block">
+            {{ page.footer.footerlogo }}
+            {{ page.footer.shortinfo }}
+            {{ page.footer.sociallinks }}
+          </div>
+          <div class="footer__menu-block">
+            {{ page.footer.causae }}
+            {{ page.footer.aperiri }}
+          </div>
+        </div>
+          <div class="footer__blogs-block">
+            {{ page.footer.views_block__blog_block_1 }}
+        </div>
       </div>
 
-      <div class="footer__menu-block">
-        {{ page.footer.causae }}
-        {{ page.footer.aperiri }}
-      </div>
-      </div>
-      <div class="footer__blogs-block">
-      {{ page.footer.views_block__blog_block_1 }}
-    </div>
-  </div>
-
-      <div class="divider"></div>
-      <div class="footer__secondary">
-        {{ page.footer.created }}
-        {{ page.footer.copyright }}
-      </div>
+          <div class="divider"></div>
+        <div class="footer__secondary">
+          {{ page.footer.created }}
+          {{ page.footer.copyright }}
+        </div>
     </footer>
   {% endif %}
-
 </div>{# /.layout-container #}
+

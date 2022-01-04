@@ -13,65 +13,74 @@
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-.menu {
-  padding-top: 10px;
-
-  &__list-item {
-    padding-top: 10px;
-  }
-  &__list-link {
-    color: rgba(0, 0, 0, 0.5);
-  }
-}
-
 .footer-container {
   background: #f2f2f2;
   padding: 15px;
 }
+
 .footer {
-  &__blogs-block {
-    margin-left: 2px;
-  }
+  @include container;
+  display: flex;
+
   @include breakpoint($mobile) {
     position: relative;
     left: -4em;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    padding-top: 72px;
   }
+
   @include breakpoint($desktop) {
     justify-content: space-evenly;
     padding-top: 70px !important;
   }
-  @include container;
-  display: flex;
+
+  &__left-block {
+    @include breakpoint($tablet) {
+      margin-left: 20px;
+    }
+    @include breakpoint($mobile) {
+      margin-left: 50px;
+    }
+  }
+
+  &__menu {
+    padding-top: 10px;
+    &-list-item {
+      padding-top: 10px;
+    }
+
+    &-list-link {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__blogs-block {
+    margin-left: 2px;
+    @include breakpoint($tablet) {
+      margin-top: 20px;
+    }
+    @include breakpoint($mobile) {
+      padding-left: 3em;
+    }
+  }
 
   &__logo {
     width: 350px;
     margin-bottom: 23px;
   }
+
   &__logo__menu {
     display: flex;
     margin-left: -20px;
-    @include breakpoint($mobile) {
-      margin-left: 0;
-    }
-  }
-
-  @include breakpoint($tablet) {
-    &__logo__menu {
+    @include breakpoint($tablet) {
       display: flex !important;
       margin-top: 0;
     }
-    &__left-block {
-      margin-left: 20px;
-    }
-
-    &__secondary {
-      display: flex !important;
-    }
-    &__created {
-      margin-right: 10em !important;
-    }
-    &__blogs-block {
-      margin-top: 20px;
+    @include breakpoint($mobile) {
+      margin-left: 0;
+      display: block;
     }
   }
 
@@ -113,7 +122,6 @@
 
   &__menu-block {
     display: flex;
-
     @include breakpoint($mobile) {
       margin-bottom: 72px;
       margin-top: 80px;
@@ -134,20 +142,32 @@
     }
   }
 
-  &__blog {
+  &__blog-container {
     display: flex;
     padding: 10px;
     padding-bottom: 50px;
+    @include breakpoint($mobile) {
+      padding-left: 0;
+    }
   }
 
-  &__blog-block {
+  &__blog-section {
     padding-left: 30px;
     height: 48px;
+    @include breakpoint($mobile) {
+      width: 257px;
+      padding-left: 18px;
+    }
   }
+
   &__blog-desc {
     color: rgba(0, 0, 0, 0.5);
     width: 270px;
+    @include breakpoint($mobile) {
+      width: 225px;
+    }
   }
+
   &__blog-title {
     width: 72px;
     height: 24px;
@@ -155,6 +175,9 @@
     color: #000000;
     font-size: 12px;
     line-height: 24px;
+    @include breakpoint($mobile) {
+      display: block;
+    }
   }
 
   &__secondary {
@@ -163,64 +186,34 @@
     padding-bottom: 30px;
     justify-content: space-around;
     padding-top: 27px;
+    @include breakpoint($tablet) {
+      display: flex !important;
+    }
+    @include breakpoint($mobile) {
+      display: block;
+    }
   }
+
   &__created {
     margin-right: 22em;
     color: rgba(0, 0, 0, 0.5);
+    @include breakpoint($tablet) {
+      margin-right: 10em !important;
+    }
+    @include breakpoint($mobile) {
+      width: 100%;
+    }
   }
+
   &__copyright {
     color: rgba(0, 0, 0, 0.5);
     margin-right: 5em;
+    @include breakpoint($mobile) {
+      width: 100%;
+    }
   }
 
   &-social__list {
     display: flex;
   }
-
-  @include breakpoint($mobile) {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    padding-top: 72px;
-
-    &__logo__menu {
-      display: block;
-    }
-    &__left-block {
-      margin-left: 50px;
-    }
-
-    &__blog {
-      padding-left: 0;
-    }
-    &__blogs-block {
-      padding-left: 3em;
-    }
-
-    &__blog-block {
-      width: 257px;
-      padding-left: 18px;
-    }
-
-    &__blog-desc {
-      width: 225px;
-    }
-
-    &__blog-title {
-      display: block;
-    }
-
-    &__secondary {
-      display: block;
-    }
-
-    &__created,
-    &__copyright {
-      width: 100%;
-    }
-  }
-}
-
-.footer:last-child {
-  display: block;
 }

@@ -25,33 +25,14 @@
  * @see template_preprocess_block()
  */
 #}
-{# {{ kpr(content) }}
-<div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</div>
-#}
-
-{# {% set links = [] %}
-{% for link in content['#items'] %}{{ kpr(link.url['#uri']) }}
-  {% set links = links|merge([{"title": link.title, url: link.url}]) %}
-{% endfor %} #}
-{# {{ kpr(content['#items']) }}
-{{ kpr(links) }} #}
-{% block temp %}<div class="footer__causae-menu">{% endblock %}
+{% block footer %}<div class="footer__causae-menu">{% endblock %}
   <div class="footer__title">
     {{ label }}
   </div>
-  <nav class="menu">
-    <ul class="menu__list">
+  <nav class="footer__menu">
+    <ul class="footer__menu-list">
     {% for link in content['#items'] %}
-      <li class="menu__list-item"><a class="menu__list-link" href= {{ link.url }}>{{ link.title }} </a></li>
+      <li class="footer__menu-list-item"><a class="footer__menu-list-link" href={{ link.url }}>{{ link.title }} </a></li>
     {% endfor %}
     </ul>
   </nav>

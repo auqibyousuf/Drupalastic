@@ -25,30 +25,9 @@
  * @see template_preprocess_block()
  */
 #}
-{# {{ kpr(content) }}
-<div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</div>
-#}
-
-{# {% set links = [] %}
-{% for link in content['#items'] %}{{ kpr(link.url['#uri']) }}
-  {% set links = links|merge([{"title": link.title, url: link.url}]) %}
-{% endfor %} #}
-{# {{ kpr(content['#items']) }}
-{{ kpr(links) }} #}
-
-
 {% embed 'block--causae.html.twig' %}
-{% block temp %}
-  <div class="footer__aperiri-menu">
-{% endblock %}
+  {% block footer %}
+    <div class="footer__aperiri-menu">
+  {% endblock %}
 {% endembed %}
 
