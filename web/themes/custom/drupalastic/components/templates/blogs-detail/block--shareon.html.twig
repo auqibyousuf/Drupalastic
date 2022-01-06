@@ -25,13 +25,10 @@
  * @see template_preprocess_block()
  */
 #}
-
-<a href ={{ content.field_facebook.0['#url'].toString() }}>
-</a>
-<a href = {{ content.field_instagram.0['#url'].toString() }}>
-</a>
-<a href = {{ content.field_twitter.0['#url'].toString() }}></a>
-
-
-
-  
+<div class="share">
+  <a href={{ content.field_facebook.0['#url'].toString() }}>
+  </a>
+  <a href={{ content.field_instagram.0['#url'].toString() }}>
+  </a>
+  <a href={{ content.field_twitter.0['#url'].toString() }}></a>
+</div>

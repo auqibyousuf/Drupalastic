@@ -70,21 +70,21 @@
  *   in different view modes.
  */
 #}
-<div class = "blogs__link">
+<div class="blogs__link">
   {{ elements.field_backlink }}
 </div>
-<div class = "blogs__image">
-<img src= "{{ elements['field_main'][0]['#markup'] }}"/>
+<div class="blogs__image">
+  <img src="{{ elements['field_main'][0]['#markup'] }}"/>
 </div>
-<div class = "blogs__cat-taxanomy">
+<div class="blogs__cat-taxanomy">
   {{ elements.field_categories }}
 </div>
 <div class="blogs__title">
-{{ elements.field_blog_title.0['#context'].value }}
+  {{ elements.field_blog_title.0['#context'].value }}
 </div>
-<div class = "blogs__body">
+<div class="blogs__body">
   {{ elements.field_body }}
 </div>
-<div class = "blogs__tag-taxanomy">
+<div class="blogs__tag-taxanomy">
   {{ elements.field_tag }}
 </div>

@@ -50,52 +50,48 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
   <main role="main" class= "container">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
     <div class = "blogs-container">
-    <div class = "blogs">
-    {{ page.content.system_main }}
-<div class="author-section">
-  {{ page.content.author }}
-</div>
-<div class="blogs__share">
-  {{ page.content.shareon }}
-</div>
-</div>
-    {{ page.sidebar.searchform }}
-{{ page.sidebar.views_block__taxonomy_categories_block_1 }}
-
+      <div class = "blogs">
+        {{ page.content.system_main }}
+      <div class="author-section">
+        {{ page.content.author }}
+      </div>
+      <div class="blogs__share">
+        {{ page.content.shareon }}
+      </div>
+    </div>
+      <div class="blogs-sidebar">
+        {{ page.sidebar.searchform }}
+        {{ page.sidebar.views_block__taxonomy_categories_block_1 }}
+      </div>
+  </main>
 </div>
     {{ page.content.form_subscribe }}
-</main>
+
 
   {% if page.footer %}
   <footer role="contentinfo" class = "footer-container">
-  <div class="footer">
-  <div class="footer__logo__menu">
-      <div class="footer__left-block">
-        {{ page.footer.footerlogo }}
-        {{ page.footer.shortinfo }}
-        {{ page.footer.sociallinks }}
-      </div>
+    <div class="footer">
+      <div class="footer__logo__menu">
+        <div class="footer__left-block">
+          {{ page.footer.footerlogo }}
+          {{ page.footer.shortinfo }}
+          {{ page.footer.sociallinks }}
+        </div>
 
-      <div class="footer__menu-block">
-        {{ page.footer.causae }}
-        {{ page.footer.aperiri }}
-      </div>
+        <div class="footer__menu-block">
+          {{ page.footer.causae }}
+          {{ page.footer.aperiri }}
+        </div>
       </div>
       <div class="footer__blogs-block">
       {{ page.footer.views_block__blog_block_1 }}
+      </div>
     </div>
-  </div>
-
-<div class="divider"></div>
-
+      <div class="divider"></div>
       <div class="footer__secondary">
         {{ page.footer.created }}
         {{ page.footer.copyright }}
       </div>
     </footer>
   {% endif %}
-</div>
-
-{{ kpr() }}
