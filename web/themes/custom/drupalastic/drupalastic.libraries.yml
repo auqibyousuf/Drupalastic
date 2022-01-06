@@ -4,6 +4,7 @@ global:
       dist/components/organisms/scss/global.css: {}
       dist/components/organisms/scss/components/menu.css: {}
       dist/components/organisms/scss/components/footer.css: {}
+      dist/components/organisms/scss/components/gmaps.css: {}
   js:
     dist/components/main.js:
     dist/components/organisms/navtoggle.js:

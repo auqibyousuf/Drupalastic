@@ -1,0 +1,25 @@
+uuid: be2432f3-5833-4705-b12d-46a62dc15ee5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:41055665-e6a9-4ed7-ad31-1a0a33d06261'
+  module:
+    - block_content
+  theme:
+    - drupalastic
+id: contact
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:41055665-e6a9-4ed7-ad31-1a0a33d06261'
+settings:
+  id: 'block_content:41055665-e6a9-4ed7-ad31-1a0a33d06261'
+  label: Contact
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
