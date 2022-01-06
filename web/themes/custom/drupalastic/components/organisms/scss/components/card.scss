@@ -57,6 +57,11 @@
     width: 160%;
   }
 }
+.card:last-child {
+  @include breakpoint($tablet) {
+    width: 160%;
+  }
+}
 
 .card__container {
   width: 100%;

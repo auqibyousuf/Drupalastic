@@ -5,7 +5,6 @@ dependencies:
   config:
     - webform.webform.subscribe
   module:
-    - node
     - webform
   theme:
     - drupalastic
@@ -23,11 +22,4 @@ settings:
   webform_id: subscribe
   default_data: ''
   redirect: false
-visibility:
-  node_type:
-    id: node_type
-    bundles:
-      blogs: blogs
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }

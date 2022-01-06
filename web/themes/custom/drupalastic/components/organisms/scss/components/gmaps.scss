@@ -1,0 +1,94 @@
+@import '../config.all';
+
+.gmap-webform-block {
+  background: var(--c-primary);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px;
+
+  @include breakpoint($mobile) {
+    display: block;
+    padding-left: 14px;
+  }
+
+  @include breakpoint($tablet) {
+    padding: 50px;
+    padding-left: 50px;
+  }
+}
+
+.form {
+  padding-left: 200px;
+  margin-left: 8em;
+}
+.form__heading {
+  color: var(--c-white);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+
+  @include breakpoint($mobile) {
+    margin-top: 20px;
+  }
+
+  @include breakpoint($tablet) {
+    margin-top: 20px;
+  }
+}
+.form__subheading {
+  color: var(--c-white);
+  font-size: 50px;
+  padding-bottom: 50px;
+  line-height: 20px;
+  font-family: 'DM Serif Display';
+}
+.form__email {
+  @include input;
+  margin-bottom: 30px;
+  @include breakpoint($mobile) {
+    width: 346px;
+  }
+  @include breakpoint($tablet) {
+    width: 95%;
+  }
+}
+
+.form__message {
+  @include input;
+  resize: none;
+  height: 96px;
+  margin-bottom: 40px;
+
+  @include breakpoint($mobile) {
+    width: 346px;
+  }
+
+  @include breakpoint($tablet) {
+    width: 95%;
+  }
+}
+
+.form__submit {
+  width: 178px;
+  height: 48px;
+  border-radius: 5px;
+  background: var(--c-secondary);
+  color: var(--c-white);
+  border: 1px solid rgba(255, 0.255, 0.255, 0.1);
+}
+
+.gmap {
+  iframe {
+    width: 570px;
+    height: 400px;
+    @include breakpoint($mobile) {
+      width: 300px;
+      height: 400px;
+    }
+
+    @include breakpoint($tablet) {
+      width: 660px;
+      height: 400px;
+    }
+  }
+}

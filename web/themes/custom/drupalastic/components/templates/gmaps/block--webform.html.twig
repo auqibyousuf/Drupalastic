@@ -25,9 +25,14 @@
  * @see template_preprocess_block()
  */
 #}
-
-{% embed 'block--causae.html.twig' %}
-  {% block footer %}
-    <div class="footer__aperiri-menu">
+<div{{ attributes.addClass("form") }}>
+  {% block content %}
+    <div class="form__heading">
+      {{ 'ancillae' }}
+    </div>
+    <div class="form__subheading">
+      {{ 'Scribentur' }}
+    </div>
+    {{ content }}
   {% endblock %}
-{% endembed %}
+</div>
