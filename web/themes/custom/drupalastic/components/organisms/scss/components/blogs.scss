@@ -194,7 +194,7 @@
     padding: 10px;
   }
   input[type='search'] {
-    @extend %input;
+    @include input;
     left: 2.5em;
     width: 300px;
   }
@@ -294,7 +294,7 @@
   }
 }
 .subscribe__email {
-  @extend %input;
+  @include input;
   width: 370px;
 
   @include breakpoint($mobile) {
