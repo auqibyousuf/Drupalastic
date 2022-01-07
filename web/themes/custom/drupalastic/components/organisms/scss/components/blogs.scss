@@ -304,17 +304,20 @@
 
 //Author
 
+.author-section {
+  position: relative;
+  top: 52em;
+  @include breakpoint($mobile) {
+    top: 40em;
+  }
+  @include breakpoint($tablet) {
+    top: 43em;
+  }
+}
 .blogs-author {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 63em;
-  @include breakpoint($mobile) {
-    top: 48em;
-  }
-  @include breakpoint($tablet) {
-    top: 40em;
-  }
+  position: relative;
 }
 .blogs-author__image {
   border-radius: 60px;
