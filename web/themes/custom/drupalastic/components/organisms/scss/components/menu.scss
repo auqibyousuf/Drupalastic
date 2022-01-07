@@ -47,31 +47,30 @@
   justify-content: flex-end;
   font-size: 14px;
   font-family: var(--f-primary);
+}
+.nav-menu__item {
+  padding: 8px;
 
-  &__item {
-    padding: 8px;
-
-    a {
-      color: var(--c-white);
-      @include text();
-      @include link-clear();
-      @include list-clear();
-      font-weight: 900;
-      margin: 1em;
-    }
+  a {
+    color: var(--c-white);
+    @include text();
+    @include link-clear();
+    @include list-clear();
+    font-weight: 900;
+    margin: 1em;
   }
+}
 
-  &__item:last-child {
-    border: 1px solid var(--c-white-50);
-    border-radius: 5px;
-    width: 170px;
-    line-height: 2;
-    height: 48px;
-    font-size: 16px;
-    text-align: center;
-    margin-top: -5px;
-    padding: 7px;
-  }
+.nav-menu__item:last-child {
+  border: 1px solid var(--c-white-50);
+  border-radius: 5px;
+  width: 170px;
+  line-height: 2;
+  height: 48px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: -5px;
+  padding: 7px;
 }
 
 @include breakpoint($tablet) {
