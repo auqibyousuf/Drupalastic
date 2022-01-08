@@ -1,30 +1,18 @@
 @import '../config.all';
-
-.divider {
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-}
-
 .footer-container {
   background: #f2f2f2;
   padding: 15px;
 }
 
 .footer {
-  @include container;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 70px;
+  width: 100%;
 
   @include breakpoint($mobile) {
-    position: relative;
-    left: -4em;
-    display: block;
-    width: 100%;
-    padding: 15px;
-    padding-top: 72px;
-  }
-
-  @include breakpoint($desktop) {
-    justify-content: space-evenly;
-    padding-top: 70px !important;
+    // align-items: end;
   }
 }
 .footer__left-block {
@@ -58,28 +46,28 @@
 }
 
 .footer__logo {
-  width: 350px;
+  width: 62px;
   margin-bottom: 23px;
 }
 
-.footer__logo__menu {
+.footer-primary {
   display: flex;
-  margin-left: -20px;
+  flex-direction: row;
+  justify-content: space-evenly;
   @include breakpoint($tablet) {
-    display: flex !important;
+    display: flex;
     margin-top: 0;
   }
   @include breakpoint($mobile) {
     margin-left: 0;
-    display: block;
+    flex-direction: column;
   }
 }
 
 .footer__short-info {
   line-height: 24px;
-  width: 270px;
+  max-width: 270px;
   color: rgba(0, 0, 0, 0.5);
-  margin-right: 130px;
   margin-bottom: 18px;
 
   @include breakpoint($mobile) {
@@ -95,15 +83,29 @@
 }
 
 .footer-social {
-  a[href*='facebook'] {
-    background-image: url(/themes/custom/drupalastic/images/facebook.png);
+  a {
     color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-position: center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    display: flex;
+  }
+  a[href*='facebook'] {
+    background-image: url(/themes/custom/drupalastic/images/facebook.png);
   }
   a[href*='instagram'] {
-    color: rgba(0, 0, 0, 0.5);
+    background-image: url(/themes/custom/drupalastic/images/instagram.png);
   }
+  a[href*='twitter'] {
+    background-image: url(/themes/custom/drupalastic/images/twitter.png);
+  }
+}
+
+.footer-social__list {
+  display: flex;
 }
 
 .footer__title {
@@ -125,11 +127,10 @@
   }
 }
 
-.footer__aperiri-menu {
-  margin-left: 200px;
-  margin-right: 150px;
+.footer__causae-menu {
+  margin-right: 143px;
   @include breakpoint($mobile) {
-    margin-left: 100px;
+    margin-left: 14px;
   }
 }
 
@@ -172,38 +173,24 @@
 }
 
 .footer__secondary {
-  background: #f2f2f2;
   display: flex;
   padding-bottom: 30px;
   justify-content: space-around;
   padding-top: 27px;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid var(--c-grey);
   @include breakpoint($tablet) {
-    display: flex !important;
+    flex-direction: row;
   }
   @include breakpoint($mobile) {
-    display: block;
+    flex-direction: column;
+    margin-right: 90px;
   }
 }
-
 .footer__created {
-  margin-right: 22em;
-  color: rgba(0, 0, 0, 0.5);
-  @include breakpoint($tablet) {
-    margin-right: 10em !important;
-  }
-  @include breakpoint($mobile) {
-    width: 100%;
-  }
+  margin-bottom: 8px;
 }
-
 .footer__copyright {
-  color: rgba(0, 0, 0, 0.5);
-  margin-right: 5em;
-  @include breakpoint($mobile) {
-    width: 100%;
-  }
-}
-
-.footer-social__list {
-  display: flex;
+  max-width: 246px;
 }

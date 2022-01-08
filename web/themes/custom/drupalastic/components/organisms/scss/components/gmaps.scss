@@ -6,20 +6,22 @@
   justify-content: space-evenly;
   padding: 100px;
 
+  @include breakpoint($desktop) {
+    padding: 30px;
+  }
   @include breakpoint($mobile) {
-    display: block;
-    padding-left: 14px;
+    flex-direction: column;
   }
 
   @include breakpoint($tablet) {
-    padding: 50px;
-    padding-left: 50px;
+    flex-direction: column;
   }
 }
 
 .form {
-  padding-left: 200px;
-  margin-left: 8em;
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
 }
 .form__heading {
   color: var(--c-white);

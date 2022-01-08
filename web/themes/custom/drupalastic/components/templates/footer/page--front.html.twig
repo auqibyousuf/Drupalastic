@@ -61,7 +61,7 @@
   {% if page.footer %}
     <footer role="contentinfo" class = "footer-container">
       <div class="footer">
-        <div class="footer__logo__menu">
+        <div class="footer-primary">
           <div class="footer__left-block">
             {{ page.footer.footerlogo }}
             {{ page.footer.shortinfo }}
@@ -71,17 +71,15 @@
             {{ page.footer.causae }}
             {{ page.footer.aperiri }}
           </div>
-        </div>
           <div class="footer__blogs-block">
             {{ page.footer.views_block__blog_block_1 }}
+          </div>
         </div>
-      </div>
-
-        <div class="divider"></div>
         <div class="footer__secondary">
           {{ page.footer.created }}
           {{ page.footer.copyright }}
         </div>
+      </div>
     </footer>
   {% endif %}
 </div>{# /.layout-container #}
