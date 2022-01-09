@@ -6,24 +6,26 @@
 
 .blogs-container {
   padding-top: 50px;
-  @include breakpoint($desktop) {
-    display: flex;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  margin-right: 15px;
+  justify-content: space-evenly;
   @include breakpoint($mobile) {
-    display: block;
-    padding-right: 16px;
-    padding-top: 50px;
-    padding-left: 16px;
+    flex-direction: column;
+    margin-left: 20px;
   }
   @include breakpoint($tablet) {
-    display: block;
+    flex-direction: column;
+    margin-left: 12px;
   }
 }
 
 .blogs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   @include breakpoint($tablet) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
   }
 }
@@ -38,8 +40,9 @@
 .blogs__image {
   img {
     border-radius: 10px;
+    max-width: 834px;
     @include breakpoint($mobile) {
-      width: 345px;
+      width: 100%;
     }
     @include breakpoint($tablet) {
       width: 100%;
@@ -53,9 +56,12 @@
   width: 674px;
   height: 160px;
   margin-top: 24px;
+  font-weight: normal;
   @include breakpoint($mobile) {
-    width: 310px;
     font-size: 55px;
+    height: 192px;
+    width: 310px;
+    margin-bottom: 120px;
   }
   @include breakpoint($tablet) {
     width: 100%;
@@ -66,7 +72,6 @@
   color: var(--c-black-50);
   @include breakpoint($mobile) {
     width: 100%;
-    position: relative;
     top: 10em;
     :nth-child(1) {
       padding-bottom: 10px;
@@ -156,33 +161,32 @@
 }
 
 .blogs__tag-taxanomy {
-  padding: 5px;
-  border: 1px solid var(--c-primary);
-  width: 66px;
-  height: 32px;
-  border-radius: 5px;
-  padding-left: 10px;
-  margin-bottom: 20px;
+  a {
+    padding: 5px;
+    border: 1px solid var(--c-primary);
+    max-width: 66px;
+    max-height: 32px;
+    border-radius: 5px;
+  }
   @include breakpoint($mobile) {
-    margin-top: 100px;
     margin-bottom: 10px;
   }
   @include breakpoint($tablet) {
-    margin-top: 0px;
     margin-bottom: 10px;
   }
 }
 
 .blogs-sidebar {
-  position: relative;
-  padding: 20px;
-  right: 4.5em;
-  padding-top: 3em;
+  align-items: center;
+  align-content: center;
   display: flex;
   flex-direction: column;
-  top: 4em;
+  padding-top: 100px;
 
   @include breakpoint($mobile) {
+    display: none;
+  }
+  @include breakpoint($tablet) {
     display: none;
   }
 }
@@ -228,28 +232,32 @@
 
 //Subscribe
 
-.subscribe__section {
+.subscribe-section {
   display: flex;
-  height: 350px;
+  height: 352px;
   background: var(--c-secondary-light);
-  align-items: center;
   justify-content: space-around;
-
+  padding: 30px 0px 0px 16px;
+  align-items: center;
   @include breakpoint($mobile) {
-    display: block;
-    padding: 30px 0px 0px 16px;
+    flex-direction: column;
     height: 480px;
+    align-items: flex-start;
+  }
+  @include breakpoint($tablet) {
+    flex-direction: column;
+    height: 480px;
+    align-items: flex-start;
   }
 }
-.subscribe__text {
+.subscribe-section__text {
   padding-right: 85px;
   @include breakpoint($mobile) {
     width: 200px;
-    height: 115px;
     padding: 0;
   }
 }
-.subscribe__heading {
+.subscribe-section__heading {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   padding-bottom: 18px;
@@ -257,7 +265,7 @@
     padding-top: 30px;
   }
 }
-.subscribe__subheading {
+.subscribe-section__subheading {
   font-family: var(--f-secondary);
   font-size: 56px;
   line-height: 64px;
@@ -269,12 +277,19 @@
   }
 }
 
-.subscribe__form {
+.subscribe-section__form {
   position: relative;
-  right: 20em;
-  top: 1em;
+  right: 8em;
+  @include breakpoint($mobile) {
+    left: 0;
+    top: 0;
+  }
+  @include breakpoint($tablet) {
+    left: 0;
+    top: 0;
+  }
   input[type='submit'] {
-    width: 178px;
+    max-width: 178px;
     height: 48px;
     border-radius: 5px;
     background: var(--c-primary);
@@ -284,41 +299,42 @@
     left: 26em;
     bottom: 3em;
     @include breakpoint($mobile) {
-      left: 2em;
+      left: 0em;
       top: 1em;
     }
   }
-  @include breakpoint($mobile) {
-    top: 12em;
-    right: 2em;
-  }
 }
-.subscribe__email {
+.subscribe-section__button {
+  width: 178px;
+  height: 48px;
+  border-radius: 5px;
+  background: var(--c-primary);
+  color: var(--c-white);
+  border: 1px solid rgba(255, 0.255, 0.255, 0.1);
+  position: relative;
+  left: 26em;
+  bottom: 3em;
+}
+
+.subscribe-section__email {
   @include input;
-  width: 370px;
+  max-width: 370px;
 
   @include breakpoint($mobile) {
-    width: 346px;
-    margin-left: 2em;
+    max-width: 346px;
+    margin-bottom: 29px;
   }
 }
 
 //Author
-
-.author-section {
-  position: relative;
-  top: 52em;
-  @include breakpoint($mobile) {
-    top: 40em;
-  }
-  @include breakpoint($tablet) {
-    top: 43em;
-  }
-}
 .blogs-author {
   display: flex;
   align-items: center;
   position: relative;
+  top: 50em;
+  @include breakpoint($mobile) {
+    top: 40em;
+  }
 }
 .blogs-author__image {
   border-radius: 60px;
@@ -327,4 +343,44 @@
 }
 .blogs-author__name {
   padding-left: 16px;
+}
+.blogs-author__date {
+  color: var(--c-black-50);
+  margin-left: 16px;
+}
+.blogs__share {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+}
+.share-on {
+  display: flex;
+  a {
+    color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    display: flex;
+  }
+  a[href*='facebook'] {
+    background-image: url(/themes/custom/drupalastic/images/facebook.png);
+  }
+  a[href*='instagram'] {
+    background-image: url(/themes/custom/drupalastic/images/instagram.png);
+  }
+  a[href*='twitter'] {
+    background-image: url(/themes/custom/drupalastic/images/twitter.png);
+  }
+}
+.share-on__list {
+  display: flex;
+}
+
+.blogs__share {
+  h2 {
+    color: var(--c-black-50);
+  }
 }

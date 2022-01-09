@@ -25,10 +25,13 @@
  * @see template_preprocess_block()
  */
 #}
-<div class="share">
-  <a href={{ content.field_facebook.0['#url'].toString() }}>
-  </a>
-  <a href={{ content.field_instagram.0['#url'].toString() }}>
-  </a>
-  <a href={{ content.field_twitter.0['#url'].toString() }}></a>
-</div>
+<h2>{{ label }}:</h2>
+  <nav class="share-on">
+  <ul class="share-on__list">
+    {% for link in content['#items'] %}
+      <li class="share-on__list-item">
+        <a class="share-on__link" href={{ link.url }}></a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

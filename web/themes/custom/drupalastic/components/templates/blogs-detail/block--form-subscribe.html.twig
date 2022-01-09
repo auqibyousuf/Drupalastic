@@ -25,24 +25,20 @@
  * @see template_preprocess_block()
  */
 #}
-{# <div{{ attributes.addClass("subscribe__form") }}>
+<div{{ attributes.addClass("subscribe-section") }}>
   {% block content %}
-    {{ content }}
-  {% endblock %}
-</div> #}
-
-<div{{ attributes.addClass("subscribe__section") }}>
-  {% block content %}
-    <div class="subscribe__text">
-      <div class="subscribe__heading">
-        {{ 'Pericula' }}
+    <div class="subscribe-section__text">
+      <div class="subscribe-section__heading">
+          {{ 'Pericula' }}
       </div>
-      <div class="subscribe__subheading">
-        {{ 'Mea modus volumus abhorreant' }}
+      <div class="subscribe-section__subheading">
+          {{ 'Mea modus volumus abhorreant' }}
       </div>
     </div>
-      <div class="subscribe__form">
+    <div class="subscribe-section__form">
+      <div>
         {{ content }}
-      </div>
+    </div>
+  </div>
   {% endblock %}
 </div>
