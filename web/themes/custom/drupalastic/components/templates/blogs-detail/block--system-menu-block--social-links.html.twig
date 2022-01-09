@@ -25,13 +25,13 @@
  * @see template_preprocess_block()
  */
 #}
-<h2>{{ label }}:</h2>
+<h2>{{ label }} :</h2>
   <nav class="share-on">
-  <ul class="share-on__list">
-    {% for link in content['#items'] %}
-      <li class="share-on__list-item">
-        <a class="share-on__link" href={{ link.url }}></a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+    <ul class="share-on__list">
+      {% for link in content['#items'] %}
+        <li class="share-on__list-item">
+          <a class="share-on__link" href={{ link.url }}></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
