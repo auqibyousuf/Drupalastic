@@ -68,7 +68,7 @@
   }
 }
 .blogs__body {
-  width: 835px;
+  max-width: 835px;
   color: var(--c-black-50);
   @include breakpoint($mobile) {
     width: 100%;
@@ -334,6 +334,9 @@
   top: 50em;
   @include breakpoint($mobile) {
     top: 40em;
+  }
+  @include breakpoint($tablet) {
+    top: 0;
   }
 }
 .blogs-author__image {
