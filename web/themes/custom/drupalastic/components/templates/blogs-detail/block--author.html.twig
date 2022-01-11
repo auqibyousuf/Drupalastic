@@ -27,6 +27,15 @@
 #}
 <div class="blogs-author">
   <img class="blogs-author__image" src="{{ content.field_image[0]['#markup'] }}"/>
-  <p class="blogs-author__name">{{ content.field_name[0]['#context'].value }}<p>
-  <p class="blogs-author__date">{{ content.field_date[0]['#markup'] }}</p>
+  <div class="blogs-author-details">
+    <p class="blogs-author__title">
+      {{ content.field_title[0]['#context'].value }}
+    </p>
+    <p class="blogs-author__name">
+      {{ content.field_name[0]['#context'].value }}
+    <p>
+    <p class="blogs-author__desc">
+      {{ content.field_desc[0]['#context'].value }}
+    </p>
+</div>
 </div>

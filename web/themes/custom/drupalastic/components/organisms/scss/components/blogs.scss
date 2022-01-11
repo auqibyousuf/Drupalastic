@@ -7,8 +7,9 @@
 .blogs-container {
   padding-top: 50px;
   display: flex;
-  margin-right: 15px;
   justify-content: space-evenly;
+  margin-right: 20px;
+
   @include breakpoint($mobile) {
     flex-direction: column;
     margin-left: 20px;
@@ -18,23 +19,17 @@
     margin-left: 12px;
   }
 }
-
-.blogs {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  @include breakpoint($tablet) {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-}
 .blogs__link {
   padding-bottom: 40px;
   color: var(--c-background);
   a {
     @include link-clear;
     color: var(--c-black-50);
+  }
+  a:before {
+    content: url(/themes/custom/drupalastic/images/backlink.png);
+    width: 14px;
+    margin-right: 12px;
   }
 }
 .blogs__image {
@@ -67,90 +62,82 @@
     width: 100%;
   }
 }
+
+.blogs__author {
+  display: flex;
+  align-items: center;
+  margin: 45px 0px;
+}
+.blogs__author-image {
+  margin-right: 16px;
+  img {
+    border-radius: 20px;
+  }
+}
+.blogs__author-name {
+  margin-right: 16px;
+  font-weight: bold;
+}
+.blogs__author-date {
+  color: var(--c-black-50);
+}
+
 .blogs__body {
   max-width: 835px;
-  color: var(--c-black-50);
-  @include breakpoint($mobile) {
-    width: 100%;
-    top: 10em;
-    :nth-child(1) {
-      padding-bottom: 10px;
-      padding-top: 0px;
-    }
+  border-bottom: 1px solid var(--c-black-50);
+  p {
+    padding-bottom: 25px;
+    color: var(--c-black-50);
+    line-height: 24px;
+  }
+  h3 {
+    margin-bottom: 25px;
+    font-family: var(--f-secondary);
+    font-size: 24px;
   }
 
-  @include breakpoint($tablet) {
-    top: 0;
-  }
-
-  :nth-child(1) {
-    padding-bottom: 10px;
-    padding-top: 40px;
-    @include breakpoint($mobile) {
-      padding-top: 5px;
+  ul {
+    margin-bottom: 40px;
+    li:before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: var(--c-primary); /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      font-size: 24px;
     }
   }
-  :nth-child(2) {
-    padding-bottom: 40px;
-    padding-top: 0;
-    @include breakpoint($mobile) {
-      padding-top: 0;
-      padding-bottom: 40px;
-    }
-    @include breakpoint($tablet) {
-      padding-bottom: 10px;
-    }
-  }
-  :nth-child(3) {
-    width: 835px;
-    height: 113px;
-    font-size: 20px;
-    padding-left: 24px;
-    padding-bottom: 40px;
-    line-height: 32px;
-    color: var(--c-black);
+  blockquote {
     position: relative;
-    @include breakpoint($mobile) {
-      width: 310px;
-      height: 250px;
+    margin: 20px 0px;
+    p {
+      color: var(--c-black);
+      line-height: 32px;
+      max-width: 807px;
+      height: 113px;
+      font-size: 20px;
+      margin-left: 24px;
     }
-    @include breakpoint($tablet) {
-      width: 100%;
-      padding-bottom: 10px;
-      height: 100px;
-    }
-  }
 
-  :nth-child(3):after {
-    content: '';
-    height: 96px; //You can change this if you want smaller/bigger borders
-    width: 6px;
-    border-radius: 5px;
-    left: 0;
-    position: absolute;
-    top: 0; // If you want to set a smaller height and center it, change this value
-    background-color: var(--c-secondary-light);
+    p:after {
+      content: '';
+      height: 96px; //You can change this if you want smaller/bigger borders
+      width: 6px;
+      border-radius: 5px;
+      left: 0;
+      position: absolute;
+      top: 0; // If you want to set a smaller height and center it, change this value
+      background-color: var(--c-secondary-light);
 
-    @include breakpoint($mobile) {
-      height: 250px;
-    }
-    @include breakpoint($tablet) {
-      height: 100px;
-    }
-  }
-
-  :nth-child(4) {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    @include breakpoint($mobile) {
-      padding-bottom: 50px;
-    }
-    @include breakpoint($tablet) {
-      padding-bottom: 0px;
+      @include breakpoint($mobile) {
+        height: 150px;
+      }
+      @include breakpoint($tablet) {
+        height: 100px;
+      }
     }
   }
 }
-
 .blogs__cat-taxanomy {
   padding-top: 40px;
   a {
@@ -161,12 +148,15 @@
 }
 
 .blogs__tag-taxanomy {
+  margin-top: 47px;
+  display: flex;
   a {
     padding: 5px;
-    border: 1px solid var(--c-primary);
-    max-width: 66px;
+    border: 1px solid rgb(67 76 204 / 30%);
     max-height: 32px;
     border-radius: 5px;
+    text-align: center;
+    margin-right: 14px;
   }
   @include breakpoint($mobile) {
     margin-bottom: 10px;
@@ -181,8 +171,7 @@
   align-content: center;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-
+  padding-top: 50px;
   @include breakpoint($mobile) {
     display: none;
   }
@@ -321,36 +310,46 @@
   max-width: 370px;
 
   @include breakpoint($mobile) {
-    max-width: 346px;
-    margin-bottom: 29px;
+    max-width: 300px;
   }
 }
 
 //Author
 .blogs-author {
   display: flex;
+  height: 176px;
+  max-width: 834px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+  border-radius: 5px;
   align-items: center;
-  position: relative;
-  top: 50em;
+  padding: 32px;
+  margin-bottom: 100px;
   @include breakpoint($mobile) {
-    top: 40em;
-  }
-  @include breakpoint($tablet) {
-    top: 0;
+    height: 346px;
+    flex-direction: column;
   }
 }
 .blogs-author__image {
   border-radius: 60px;
-  width: 32px;
-  height: 32px;
+  width: 112px;
+  height: 112px;
+  margin-right: 32px;
+}
+.blogs-author__desc {
+  color: var(--c-black-50);
+  margin-top: 6px;
 }
 .blogs-author__name {
-  padding-left: 16px;
+  font-size: 20px;
+  line-height: 32px;
 }
-.blogs-author__date {
-  color: var(--c-black-50);
-  margin-left: 16px;
+.blogs-author__title {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
 }
+
 .blogs__share {
   display: flex;
   justify-content: end;

@@ -83,10 +83,23 @@
   <h2 class="blogs__title">
     {{ elements.field_blog_title.0['#context'].value }}
   </h2>
+
+  <div class="blogs__author">
+    <div class="blogs__author-image">
+      <img src="{{ content.field_author_image[0]['#markup'] }}" />
+    </div>
+    <div class="blogs__author-name">
+      {{ content.field_author_name.0 }}
+    </div>
+    <div class="blogs__author-date">
+      {{ content.field_post_date.0['#markup'] }}
+    </div>
+  </div>
+
   <div class="blogs__body">
-    {{ elements.field_body }}
+    {{ content.field_body.0 }}
   </div>
   <div class="blogs__tag-taxanomy">
-    {{ elements.field_tag }}
+    {{ content.field_tag }}
   </div>
 </div>
