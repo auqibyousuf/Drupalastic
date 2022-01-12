@@ -112,34 +112,13 @@
   blockquote {
     position: relative;
     margin: 20px 0px;
-    @include breakpoint($mobile) {
-      height: 220px;
-    }
+    border-left: 4px solid var(--c-secondary-light);
     p {
       color: var(--c-black);
       line-height: 32px;
       max-width: 807px;
-      height: 113px;
       font-size: 20px;
       margin-left: 24px;
-    }
-
-    p:after {
-      content: '';
-      height: 96px; //You can change this if you want smaller/bigger borders
-      width: 6px;
-      border-radius: 5px;
-      left: 0;
-      position: absolute;
-      top: 0; // If you want to set a smaller height and center it, change this value
-      background-color: var(--c-secondary-light);
-
-      @include breakpoint($mobile) {
-        height: 220px;
-      }
-      @include breakpoint($tablet) {
-        height: 100px;
-      }
     }
   }
 }
