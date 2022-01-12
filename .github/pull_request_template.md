@@ -8,8 +8,11 @@
 
 ## Screenshots
 - [ ] Mobile
+![Mobile]()
 - [ ] Tablet
+![Tablet]()
 - [ ] Desktop
+![Desktop]()
 
 ## After Pull Request
 - [ ] Github Actions are passing
