@@ -72,16 +72,16 @@
 #}
 <div class="blogs-content">
   <div class="blogs__link">
-    {{ elements.field_backlink }}
+    {{ content.field_backlink }}
   </div>
   <div class="blogs__image">
-    <img src="{{ elements['field_main'][0]['#markup'] }}"/>
+    <img src="{{ content['field_main'][0]['#markup'] }}"/>
   </div>
   <div class="blogs__cat-taxanomy">
-    {{ elements.field_categories }}
+    {{ content.field_categories }}
   </div>
   <h2 class="blogs__title">
-    {{ elements.field_blog_title.0['#context'].value }}
+    {{ content.field_blog_title.0['#context'].value }}
   </h2>
 
   <div class="blogs__author">
