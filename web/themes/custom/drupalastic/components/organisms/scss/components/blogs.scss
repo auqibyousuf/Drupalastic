@@ -110,6 +110,9 @@
   blockquote {
     position: relative;
     margin: 20px 0px;
+    @include breakpoint($mobile) {
+      height: 220px;
+    }
     p {
       color: var(--c-black);
       line-height: 32px;
@@ -130,7 +133,7 @@
       background-color: var(--c-secondary-light);
 
       @include breakpoint($mobile) {
-        height: 150px;
+        height: 220px;
       }
       @include breakpoint($tablet) {
         height: 100px;
