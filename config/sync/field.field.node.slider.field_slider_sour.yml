@@ -1,0 +1,19 @@
+uuid: 3aa39bd7-55b6-40b0-a793-133e9e155fe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_sour
+    - node.type.slider
+id: node.slider.field_slider_sour
+field_name: field_slider_sour
+entity_type: node
+bundle: slider
+label: 'slider source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

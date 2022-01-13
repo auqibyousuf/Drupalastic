@@ -1,0 +1,209 @@
+@import '../config.all';
+
+.page-title {
+  text-align: center;
+  background: var(--c-primary);
+  height: 270px;
+}
+.title {
+  padding-top: 30px;
+  p:nth-child(1) {
+    font-size: 72px;
+    font-family: var(--f-secondary);
+    color: var(--c-white);
+  }
+  p:nth-child(2) {
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--c-white);
+  }
+}
+
+.contact-container {
+  background-color: var(--c-background);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact__gmap {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+
+  iframe {
+    width: 1100px;
+    height: 640px;
+  }
+  @include breakpoint($mobile) {
+    iframe {
+      width: 347px;
+      height: 190px;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    iframe {
+      width: 700px;
+      height: 400px;
+    }
+  }
+}
+
+.contact-form-with-info {
+  display: flex;
+  justify-content: space-evenly;
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 800px;
+  margin-left: 30px;
+  @include breakpoint($mobile) {
+    margin-left: 10px;
+    width: 90%;
+  }
+  @include breakpoint($tablet) {
+    width: 100%;
+    padding-right: 2em;
+    margin-left: 15px;
+    padding-bottom: 20px;
+  }
+}
+.contact-form__label {
+  font-size: 56px;
+  font-family: var(--f-primary);
+  @include breakpoint($tablet) {
+    text-align: center;
+  }
+}
+.contact-form__name,
+.contact-form__email {
+  @include input;
+  padding: 20px;
+  margin-bottom: 30px;
+  @include breakpoint($mobile) {
+    width: 355px;
+  }
+}
+.contact-form__message {
+  @include input;
+  height: 144px;
+  resize: none;
+  overflow: auto;
+  width: 800px;
+  padding: 20px;
+  margin-bottom: 30px;
+  @include breakpoint($mobile) {
+    width: 355px;
+  }
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
+}
+
+.contact-form__submit {
+  background: var(--c-primary);
+  margin-bottom: 80px;
+  width: 178px;
+  height: 48px;
+  border-radius: 5px;
+  color: var(--c-white);
+  border: 1px solid rgba(255, 0.255, 0.255, 0.1);
+  @include breakpoint($tablet) {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+  }
+}
+
+.info {
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  max-width: 350px;
+  @include breakpoint($tablet) {
+    left: 1em;
+    right: 0;
+  }
+  @include breakpoint($mobile) {
+    right: 0;
+    left: 1em;
+  }
+}
+.info__label {
+  font-size: 56px;
+  font-family: var(--f-primary);
+  margin-bottom: 35px;
+}
+.info__location {
+  color: var(--c-black-50);
+}
+
+.info__email {
+  display: flex;
+  align-items: center;
+  padding-bottom: 42px;
+  img {
+    width: 48px;
+    height: 37px;
+    margin-right: 22px;
+  }
+  a {
+    @include link-clear;
+    color: var(--c-black);
+  }
+}
+.info__phone,
+.info__location {
+  display: flex;
+  align-items: center;
+  padding-bottom: 42px;
+  img {
+    width: 48px;
+    height: 48px;
+    margin-right: 22px;
+  }
+}
+.info-social {
+  @include breakpoint($tablet) {
+    margin-left: 15px;
+  }
+  @include breakpoint($mobile) {
+    margin-left: 15px;
+  }
+}
+.info-social__list-item {
+  background: var(--c-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  display: inline-block;
+  a {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  a[href*='facebook'] {
+    background-image: url(/themes/custom/drupalastic/images/contact/facebook.png);
+  }
+  a[href*='instagram'] {
+    background-image: url(/themes/custom/drupalastic/images/contact/instagram.png);
+  }
+  a[href*='twitter'] {
+    background-image: url(/themes/custom/drupalastic/images/contact/twitter.png);
+  }
+}

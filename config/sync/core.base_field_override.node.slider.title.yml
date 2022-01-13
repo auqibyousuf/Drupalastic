@@ -1,0 +1,18 @@
+uuid: 0e1750b6-e7a8-4e17-b7a7-c26d84b7e0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slider
+id: node.slider.title
+field_name: title
+entity_type: node
+bundle: slider
+label: Slider
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

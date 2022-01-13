@@ -11,7 +11,7 @@ id: node.blogs.field_thumb
 field_name: field_thumb
 entity_type: node
 bundle: blogs
-label: 'thumb image'
+label: 'Blog listing image'
 description: ''
 required: false
 translatable: false

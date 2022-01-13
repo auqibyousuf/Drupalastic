@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blogs.field_author_image
+    - field.field.node.blogs.field_author_name
     - field.field.node.blogs.field_backlink
     - field.field.node.blogs.field_blog_title
     - field.field.node.blogs.field_body
     - field.field.node.blogs.field_categories
     - field.field.node.blogs.field_desc
     - field.field.node.blogs.field_image
+    - field.field.node.blogs.field_learn_more_link
     - field.field.node.blogs.field_main
+    - field.field.node.blogs.field_post_date
     - field.field.node.blogs.field_preview_image
     - field.field.node.blogs.field_tag
     - field.field.node.blogs.field_thumb
@@ -17,10 +21,9 @@ dependencies:
     - image.style.thumbnail
     - node.type.blogs
   module:
+    - datetime
     - image
     - link
-    - path
-    - text
     - path
     - text
 id: node.blogs.default
@@ -34,6 +37,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author_image:
+    weight: 135
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_author_name:
+    weight: 134
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_backlink:
     weight: 131
     settings:
@@ -44,23 +63,6 @@ content:
     region: content
   field_blog_title:
     weight: 132
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_body:
-    weight: 128
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-  field_body:
-    weight: 128
     settings:
       size: 60
       placeholder: ''
@@ -88,7 +90,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_desc:
-    weight: 125
+    weight: 133
     settings:
       size: 60
       placeholder: ''
@@ -103,14 +105,27 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_learn_more_link:
+    weight: 136
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_main:
-  field_main_image:
     weight: 126
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_post_date:
+    weight: 137
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_preview_image:
     weight: 123

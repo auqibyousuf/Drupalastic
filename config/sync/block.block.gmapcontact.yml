@@ -1,0 +1,25 @@
+uuid: 526a3108-1247-473c-bc7b-544a735fdc0b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:gmap_contact:f28d87b6-b5ee-4e59-979c-e543175a2a4a'
+  module:
+    - block_content
+  theme:
+    - drupalastic
+id: gmapcontact
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:f28d87b6-b5ee-4e59-979c-e543175a2a4a'
+settings:
+  id: 'block_content:f28d87b6-b5ee-4e59-979c-e543175a2a4a'
+  label: Gmap-Contact
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

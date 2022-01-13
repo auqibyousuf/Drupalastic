@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - block_content.type.author_block
+    - field.field.block_content.author_block.field_desc
     - field.field.block_content.author_block.field_image
     - field.field.block_content.author_block.field_name
+    - field.field.block_content.author_block.field_title
   module:
     - image
 id: block_content.author_block.default
@@ -13,6 +15,14 @@ targetEntityType: block_content
 bundle: author_block
 mode: default
 content:
+  field_desc:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_image:
     weight: 0
     label: hidden
@@ -24,6 +34,14 @@ content:
   field_name:
     weight: 1
     label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 3
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }

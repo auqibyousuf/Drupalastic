@@ -1,0 +1,19 @@
+uuid: 3e9dd0d5-566e-46b9-8981-958dd562d395
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.author_block
+    - field.storage.block_content.field_desc
+id: block_content.author_block.field_desc
+field_name: field_desc
+entity_type: block_content
+bundle: author_block
+label: Desc
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

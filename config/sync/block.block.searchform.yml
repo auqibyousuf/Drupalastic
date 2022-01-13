@@ -9,7 +9,7 @@ dependencies:
 id: searchform
 theme: drupalastic
 region: sidebar
-weight: 0
+weight: -13
 provider: null
 plugin: search_form_block
 settings:

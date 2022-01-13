@@ -1,16 +1,18 @@
-uuid: f484b9f3-7845-4d69-aa86-6861351eef5f
+uuid: 6681cf87-4a38-4671-ae66-65b37433614c
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - link
-id: block_content.field_twitter
-field_name: field_twitter
+id: block_content.field_gmap_contact
+field_name: field_gmap_contact
 entity_type: block_content
-type: link
-settings: {  }
-module: link
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

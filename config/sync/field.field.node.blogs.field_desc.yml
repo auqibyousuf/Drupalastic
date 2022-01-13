@@ -1,4 +1,4 @@
-uuid: 0de2f303-79db-418f-96d2-90dd814aedaf
+uuid: d6b0dc8d-232a-48bd-aa3d-118489d07735
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.blogs.field_desc
 field_name: field_desc
 entity_type: node
 bundle: blogs
-label: desc
+label: 'Blog description'
 description: ''
 required: false
 translatable: false

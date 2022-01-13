@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - block_content.type.author_block
+    - field.field.block_content.author_block.field_desc
     - field.field.block_content.author_block.field_image
     - field.field.block_content.author_block.field_name
+    - field.field.block_content.author_block.field_title
     - image.style.thumbnail
   module:
     - image
@@ -14,6 +16,14 @@ targetEntityType: block_content
 bundle: author_block
 mode: default
 content:
+  field_desc:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_image:
     weight: 26
     settings:
@@ -24,6 +34,14 @@ content:
     region: content
   field_name:
     weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 29
     settings:
       size: 60
       placeholder: ''

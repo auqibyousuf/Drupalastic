@@ -1,0 +1,35 @@
+uuid: c1056be1-848a-4f2e-9647-389f4263c052
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gmap_contact
+    - field.field.block_content.gmap_contact.field_gmap_contact
+  module:
+    - simple_gmap
+id: block_content.gmap_contact.default
+targetEntityType: block_content
+bundle: gmap_contact
+mode: default
+content:
+  field_gmap_contact:
+    weight: 0
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: '250'
+      iframe_height: '250'
+      iframe_title: ''
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_static_map: false
+      include_link: false
+      include_text: false
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+hidden: {  }
