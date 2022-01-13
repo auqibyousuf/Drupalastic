@@ -1,0 +1,24 @@
+uuid: 5cec9c22-b0b7-440f-a6b1-978e32fa69b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slider
+  module:
+    - views
+  theme:
+    - drupalastic
+id: views_block__slider_block_1
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:slider-block_1'
+settings:
+  id: 'views_block:slider-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

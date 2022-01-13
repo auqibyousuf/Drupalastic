@@ -1,0 +1,19 @@
+uuid: ea914028-1850-436c-beac-a5375c3701cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_desc
+    - node.type.slider
+id: node.slider.field_slider_desc
+field_name: field_slider_desc
+entity_type: node
+bundle: slider
+label: 'slider desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

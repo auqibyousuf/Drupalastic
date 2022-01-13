@@ -1,0 +1,67 @@
+uuid: 3de5bdb4-54ca-45d5-9871-da4e8b23c7bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.info_block
+    - field.field.block_content.info_block.field_email
+    - field.field.block_content.info_block.field_email_image
+    - field.field.block_content.info_block.field_location
+    - field.field.block_content.info_block.field_location_image
+    - field.field.block_content.info_block.field_phone
+    - field.field.block_content.info_block.field_phone_image
+  module:
+    - image
+id: block_content.info_block.default
+targetEntityType: block_content
+bundle: info_block
+mode: default
+content:
+  field_email:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_email_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_location:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_location_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_phone:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden: {  }

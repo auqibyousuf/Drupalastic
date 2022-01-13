@@ -1,0 +1,29 @@
+uuid: 0aaed6be-f1df-448c-8c84-f0605381b156
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gmap_contact
+    - field.field.block_content.gmap_contact.field_gmap_contact
+id: block_content.gmap_contact.default
+targetEntityType: block_content
+bundle: gmap_contact
+mode: default
+content:
+  field_gmap_contact:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

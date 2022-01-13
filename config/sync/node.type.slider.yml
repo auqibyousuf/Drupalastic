@@ -1,0 +1,17 @@
+uuid: 5f892a6a-2d67-4b04-b923-199d22b81696
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Slider
+type: slider
+description: 'Used for Slick Slider'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

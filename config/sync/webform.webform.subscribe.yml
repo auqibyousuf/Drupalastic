@@ -13,23 +13,26 @@ title: Subscribe
 description: ''
 category: ''
 elements: |-
-  email:
-    '#type': email
-    '#title': Email
-    '#title_display': none
-    '#description_display': invisible
-    '#placeholder': Email
+  flexbox:
+    '#type': container
     '#attributes':
       class:
-        - subscribe__email
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': Subscribe
-    '#submit__attributes':
-      class:
-        - subscribe__button
-    '#update_hide': true
+        - subscribe-section__form
+    email:
+      '#type': email
+      '#title': Email
+      '#title_display': none
+      '#placeholder': Email
+      '#attributes':
+        class:
+          - subscribe-section__email
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#submit__label': Subscribe
+      '#submit__attributes':
+        class:
+          - subscribe-section__button
 css: ''
 javascript: ''
 settings:

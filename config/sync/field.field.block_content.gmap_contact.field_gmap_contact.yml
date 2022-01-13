@@ -1,0 +1,19 @@
+uuid: b773f54c-297f-4759-9786-7841dd7ab426
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gmap_contact
+    - field.storage.block_content.field_gmap_contact
+id: block_content.gmap_contact.field_gmap_contact
+field_name: field_gmap_contact
+entity_type: block_content
+bundle: gmap_contact
+label: 'Gmap Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
