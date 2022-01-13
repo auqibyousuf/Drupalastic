@@ -1,0 +1,116 @@
+@import '../config.all';
+.testimonials-container {
+  height: 500px;
+  background: var(--c-primary);
+  display: flex;
+  margin-bottom: 42px;
+  @include breakpoint($mobile) {
+    height: 890px;
+  }
+}
+
+.testimonials-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  padding-top: 127px;
+  margin-left: 267px;
+  @include breakpoint($mobile) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 73px;
+  }
+  @include breakpoint($tablet) {
+    margin-left: 70px;
+  }
+}
+
+.testimonials-section__info {
+  color: var(--c-white);
+  width: 670px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($mobile) {
+    width: 287px;
+    margin-top: 90px;
+    right: 3em;
+  }
+  @include breakpoint($tablet) {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.testimonials-section__image {
+  margin-right: 98px;
+}
+.testimonials-section__name {
+  margin-bottom: 33px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.testimonials-section__desc {
+  height: 107px;
+  font-family: var(--f-secondary);
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 22px;
+  @include breakpoint($mobile) {
+    height: 248px;
+  }
+  @include breakpoint($tablet) {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+.testimonials-section__source {
+  color: var(--c-white-50);
+}
+.testimonials-section__author {
+  margin-bottom: 6px;
+}
+
+.arrows {
+  position: absolute;
+  top: 192px;
+  left: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include breakpoint($mobile) {
+    left: 14px;
+  }
+  @include breakpoint($tablet) {
+    left: 15px;
+    top: 250px;
+  }
+}
+
+.back,
+.next {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--c--white);
+  border-radius: 5px;
+}
+.next {
+  background-image: url(/themes/custom/drupalastic/images/next-arrow.png);
+}
+
+.back {
+  background-image: url(/themes/custom/drupalastic/images/back-arrow.png);
+}
