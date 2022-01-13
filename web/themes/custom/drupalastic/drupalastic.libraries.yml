@@ -7,11 +7,21 @@ global:
       dist/components/organisms/scss/components/gmaps.css: {}
       dist/components/organisms/scss/components/blogs.css: {}
       dist/components/organisms/scss/components/contact.css: {}
+      dist/components/organisms/scss/components/testimonials.css: {}
   js:
-    dist/components/main.js:
-    dist/components/organisms/navtoggle.js:
-      attributes:
-        type: module
+    dist/components/organisms/ts/navtoggle.js:
+    dist/components/organisms/ts/testimonials.js:
+  dependencies:
+    - drupalastic/slick
+
+slick:
+  css:
+    base:
+      /libraries/slick/slick.css: {}
+  js:
+    /libraries/slick/slick.js:
+  dependencies:
+    - core/jquery
 
 card:
   css:
