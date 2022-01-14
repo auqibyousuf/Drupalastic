@@ -1,0 +1,25 @@
+uuid: 6ffe448c-1f04-4cf7-989b-06ac08613511
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b92b5e43-975c-41b6-932c-0868a5c88f80'
+  module:
+    - block_content
+  theme:
+    - drupalastic
+id: blogtitle
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b92b5e43-975c-41b6-932c-0868a5c88f80'
+settings:
+  id: 'block_content:b92b5e43-975c-41b6-932c-0868a5c88f80'
+  label: 'Blog Title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

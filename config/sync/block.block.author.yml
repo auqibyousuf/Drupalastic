@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:author_block:d6662f97-6b25-4a94-bd33-7eccda913924'
   module:
     - block_content
+    - system
   theme:
     - drupalastic
 id: author
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

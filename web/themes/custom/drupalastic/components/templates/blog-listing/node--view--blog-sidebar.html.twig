@@ -70,24 +70,20 @@
  *   in different view modes.
  */
 #}
-<div>
-<div class="testimonials-section">
-  <div class="testimonials-section__image">
-    {{ content.field_slide_image.0 }}
-  </div>
-  <div class="testimonials-section__info">
-    <div class="testimonials-section__name">
-      {{ content.field_name.0 }}
+<div class="blog-listing__sidebar-container">
+  <a class="" href="{{ content.field_preview_image.0['#url'].toString() }}">
+    <img src="{{ file_url(content.field_preview_image[0]['#url'].uri) }}" />
+  </a>
+  <div class="blog-listing-body-section">
+    <div class="blog-listing-body__desc">
+      {{ content.field_desc[0] }}
     </div>
-    <div class="testimonials-section__desc">
-      {{ content.field_slider_desc.0 }}
-    </div>
-    <div class="testimonials-section__author">
-      {{ content.field_slider_author.0 }}
-    </div>
-    <div class="testimonials-section__source">
-      {{ content.field_slider_sour.0 }}
+    <div class="blog-listing-body__title">
+      {{ content.field_post_date.0 }}
     </div>
   </div>
 </div>
-</div>
+
+    {# {{ content.field_desc.0 }}
+    {{content.field_title }}
+    {{content.field_post_date.0 }} #}

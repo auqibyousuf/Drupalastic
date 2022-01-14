@@ -1,0 +1,29 @@
+uuid: 840e1798-4eb3-4e28-8c71-ac11a21fe8b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_listing
+  module:
+    - system
+    - views
+  theme:
+    - drupalastic
+id: views_block__blog_listing_block_1
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:blog_listing-block_1'
+settings:
+  id: 'views_block:blog_listing-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

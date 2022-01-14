@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:gmap:3f019812-ed6b-42ee-8470-b65ce35d2e90'
   module:
     - block_content
+    - system
   theme:
     - drupalastic
 id: gmap
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<blog>'
+    negate: true

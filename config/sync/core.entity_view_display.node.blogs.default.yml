@@ -20,92 +20,26 @@ dependencies:
     - field.field.node.blogs.field_title
     - node.type.blogs
   module:
-    - datetime
-    - image
-    - link
     - user
 id: node.blogs.default
 targetEntityType: node
 bundle: blogs
 mode: default
-content:
-  field_author_image:
-    weight: 7
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_author_name:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_blog_title:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_categories:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_desc:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_learn_more_link:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_post_date:
-    weight: 5
-    label: hidden
-    settings:
-      timezone_override: ''
-      date_format: 'd M Y'
-    third_party_settings: {  }
-    type: datetime_custom
-    region: content
-  field_thumb:
-    type: image
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
+content: {  }
 hidden:
+  field_author_image: true
+  field_author_name: true
   field_backlink: true
+  field_blog_title: true
   field_body: true
+  field_categories: true
+  field_desc: true
   field_image: true
+  field_learn_more_link: true
   field_main: true
+  field_post_date: true
   field_preview_image: true
   field_tag: true
+  field_thumb: true
   field_title: true
   links: true

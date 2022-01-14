@@ -1,0 +1,24 @@
+uuid: 6d2a144f-366c-400e-a709-d173465e3a3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_sidebar
+  module:
+    - views
+  theme:
+    - drupalastic
+id: views_block__blog_sidebar_block_1
+theme: drupalastic
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:blog_sidebar-block_1'
+settings:
+  id: 'views_block:blog_sidebar-block_1'
+  label: 'Recent Posts'
+  provider: views
+  label_display: visible
+  views_label: 'Recent Posts'
+  items_per_page: none
+visibility: {  }
