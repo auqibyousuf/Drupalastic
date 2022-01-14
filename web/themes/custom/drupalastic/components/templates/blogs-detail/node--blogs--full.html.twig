@@ -70,24 +70,36 @@
  *   in different view modes.
  */
 #}
-<div>
-<div class="testimonials-section">
-  <div class="testimonials-section__image">
-    {{ content.field_slide_image.0 }}
+<div class="blogs-content">
+  <div class="blogs__link">
+    {{ content.field_backlink }}
   </div>
-  <div class="testimonials-section__info">
-    <div class="testimonials-section__name">
-      {{ content.field_name.0 }}
+  <div class="blogs__image">
+    <img src="{{ content['field_main'][0]['#markup'] }}"/>
+  </div>
+  <div class="blogs__cat-taxanomy">
+    {{ content.field_categories }}
+  </div>
+  <h2 class="blogs__title">
+    {{ content.field_blog_title.0['#context'].value }}
+  </h2>
+
+  <div class="blogs__author">
+    <div class="blogs__author-image">
+      <img src="{{ content.field_author_image[0]['#markup'] }}" />
     </div>
-    <div class="testimonials-section__desc">
-      {{ content.field_slider_desc.0 }}
+    <div class="blogs__author-name">
+      {{ content.field_author_name.0 }}
     </div>
-    <div class="testimonials-section__author">
-      {{ content.field_slider_author.0 }}
-    </div>
-    <div class="testimonials-section__source">
-      {{ content.field_slider_sour.0 }}
+    <div class="blogs__author-date">
+      {{ content.field_post_date.0['#markup'] }}
     </div>
   </div>
-</div>
+
+  <div class="blogs__body">
+    {{ content.field_body.0 }}
+  </div>
+  <div class="blogs__tag-taxanomy">
+    {{ content.field_tag }}
+  </div>
 </div>

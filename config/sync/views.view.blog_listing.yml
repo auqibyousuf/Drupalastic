@@ -1,19 +1,20 @@
-uuid: f010c8f9-46aa-4596-bfc5-bf45b657ff5b
+uuid: 31a9b0df-2459-493c-a493-19c3be0b16c1
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.tags
+    - core.entity_view_mode.node.blog_list
+    - node.type.blogs
   module:
-    - taxonomy
+    - node
     - user
-id: tags_taxanomy
-label: 'Tags Taxanomy'
+id: blog_listing
+label: 'Blog Listing'
 module: views
 description: ''
 tag: ''
-base_table: taxonomy_term_field_data
-base_field: tid
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -47,23 +48,40 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: full
         options:
+          items_per_page: 3
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
       style:
         type: default
       row:
-        type: 'entity:taxonomy_term'
+        type: 'entity:node'
         options:
           relationship: none
-          view_mode: default
+          view_mode: blog_list
       fields:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          entity_type: taxonomy_term
-          entity_field: name
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
           label: ''
           alter:
             alter_text: false
@@ -76,10 +94,9 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
-          type: string
           settings:
             link_to_entity: true
-          plugin_id: term_name
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -95,6 +112,7 @@ display:
           empty: ''
           hide_alter_empty: true
           click_sort_column: value
+          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -105,14 +123,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
       filters:
         status:
           value: '1'
-          table: taxonomy_term_field_data
+          table: node_field_data
           field: status
           plugin_id: boolean
-          entity_type: taxonomy_term
+          entity_type: node
           entity_field: status
           id: status
           expose:
@@ -120,20 +137,35 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        vid:
-          id: vid
-          table: taxonomy_term_field_data
-          field: vid
+        type:
+          id: type
+          table: node_field_data
+          field: type
           value:
-            tags: tags
-          entity_type: taxonomy_term
-          entity_field: vid
+            blogs: blogs
+          entity_type: node
+          entity_field: type
           plugin_id: bundle
           expose:
             operator_limit_selection: false
             operator_list: {  }
-      sorts: {  }
-      title: 'Tags Taxanomy'
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Blog Listing'
       header: {  }
       footer: {  }
       empty: {  }
@@ -145,6 +177,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   block_1:
@@ -159,5 +193,24 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: blog
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }

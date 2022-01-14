@@ -70,24 +70,36 @@
  *   in different view modes.
  */
 #}
-<div>
-<div class="testimonials-section">
-  <div class="testimonials-section__image">
-    {{ content.field_slide_image.0 }}
+<div class="blog-listing-post">
+<div class="blog-listing__image">
+  {{ content.field_thumb }}
+</div>
+
+  <div class="blog-listing__header">
+    <div class="blog-listing__category">
+      {{ content.field_categories.0 }}
+    </div>
+    <div class="blog-listing__title">
+      {{ content.field_blog_title.0 }}
+    </div>
+    <p class="blog-listing__description">
+      {{ content.field_desc.0 }}
+    </p>
   </div>
-  <div class="testimonials-section__info">
-    <div class="testimonials-section__name">
-      {{ content.field_name.0 }}
+  <div class="blog-listing__footer">
+    <div class="blog-listing__link">
+      {{ content.field_learn_more_link.0 }}
     </div>
-    <div class="testimonials-section__desc">
-      {{ content.field_slider_desc.0 }}
-    </div>
-    <div class="testimonials-section__author">
-      {{ content.field_slider_author.0 }}
-    </div>
-    <div class="testimonials-section__source">
-      {{ content.field_slider_sour.0 }}
-    </div>
+    <div class="blog-listing__author-section">
+      <p class="blog-listing__date">
+        {{ content.field_post_date.0 }}
+      </p>
+      <p class="blog-listing__author-name">
+        {{ content.field_author_name.0 }}
+      </p>
+      <div class="blog-listing__author-image">
+        {{ content.field_author_image }}
+      </div>
   </div>
 </div>
 </div>

@@ -8,6 +8,8 @@ global:
       dist/components/organisms/scss/components/blogs.css: {}
       dist/components/organisms/scss/components/contact.css: {}
       dist/components/organisms/scss/components/testimonials.css: {}
+      dist/components/organisms/scss/components/blog-listing.css: {}
+
   js:
     dist/components/organisms/ts/navtoggle.js:
     dist/components/organisms/ts/testimonials.js:

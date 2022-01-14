@@ -1,0 +1,219 @@
+@import '../config.all';
+
+.blog-listing-container {
+  background: var(--c-background);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 65px 15px;
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
+}
+
+.blog-listing__image {
+  img {
+    @include breakpoint($mobile) {
+      width: 100%;
+      height: 100%;
+    }
+    @include breakpoint($tablet) {
+      width: 100%;
+      height: 100%px;
+    }
+  }
+}
+
+.blog-listing-section {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+  margin-bottom: 32px;
+  max-width: 834px;
+  max-height: 750px;
+}
+
+.blog-listing-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 32px;
+}
+.blog-listing__header {
+  border-bottom: 1px solid var(--c-grey-light);
+}
+.blog-listing__description {
+  color: var(--c-black-50);
+  padding: 20px 0px;
+  line-height: 24px;
+}
+.blog-listing__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+  align-items: center;
+}
+
+.blog-listing__link {
+  a {
+    color: var(--c-black);
+  }
+}
+.blog-listing__author-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    margin-right: 20px;
+  }
+}
+.blog-listing__date {
+  color: var(--c-grey);
+}
+.blog-listing__author-image {
+  img {
+    border-radius: 50px;
+  }
+}
+.blog-listing__title {
+  font-size: 56px;
+  line-height: 64px;
+  font-family: var(--f-secondary);
+  @include breakpoint($tablet) {
+    font-size: 50px;
+  }
+}
+.blog-listing__category {
+  padding: 30px 0px 5px 0px;
+  a {
+    @include link-clear;
+    color: var(--c-black);
+  }
+}
+
+.blog-listing-sidebar-post {
+  @include breakpoint($tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blogs-sidebar__search {
+  input[type='search'] {
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
+  }
+}
+
+.pager__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 20px;
+}
+.blog-pager__list-item {
+  border: 1px solid var(--c-grey-light);
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  padding: 10px;
+  margin-right: 8px;
+}
+.blog-pager__list-item.is-active {
+  background: var(--c-primary);
+  a {
+    color: var(--c-white);
+  }
+}
+
+.blog-label {
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 55px;
+  margin-bottom: 40px;
+  font-family: var(--f-secondary);
+}
+
+.blog-listing__tags-list-container {
+  max-width: 350px;
+}
+.blog-listing__tags-list-item {
+  border: 1px solid #434ccc47;
+  border-radius: 5px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 14px;
+  margin-bottom: 16px;
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+}
+
+.blog-listing-sidebar {
+  @include breakpoint($mobile) {
+    margin: 20px;
+  }
+  @include breakpoint($tablet) {
+    margin: 20px;
+  }
+}
+
+.blog-listing__sidebar-container {
+  display: flex;
+  padding: 10px;
+  padding-bottom: 50px;
+  @include breakpoint($mobile) {
+    padding-left: 0;
+  }
+}
+
+.blog-listing-body-section {
+  padding-left: 30px;
+  height: 48px;
+  max-width: 170px;
+  @include breakpoint($mobile) {
+    width: 257px;
+  }
+}
+
+.blog-listing-body__desc {
+  color: rgba(0, 0, 0, 0.5);
+  @include breakpoint($mobile) {
+    width: 225px;
+  }
+}
+
+.blog-listing-body__title {
+  width: 72px;
+  height: 24px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 12px;
+  line-height: 24px;
+  @include breakpoint($mobile) {
+    display: block;
+  }
+}
+
+.blog-pager__previous,
+.blog-pager__next {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 10px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.blog-pager__previous {
+  background-image: url(/themes/custom/drupalastic/images/backarrowpager.png);
+}
+.blog-pager__next {
+  background-image: url(/themes/custom/drupalastic/images/nextarrowpager.png);
+}

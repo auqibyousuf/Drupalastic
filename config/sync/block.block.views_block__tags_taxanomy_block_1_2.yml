@@ -1,0 +1,24 @@
+uuid: 194f8b62-5bd9-460a-bd41-47c36ddba758
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tags_taxanomy
+  module:
+    - views
+  theme:
+    - drupalastic
+id: views_block__tags_taxanomy_block_1_2
+theme: drupalastic
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:tags_taxanomy-block_1'
+settings:
+  id: 'views_block:tags_taxanomy-block_1'
+  label: Tags
+  provider: views
+  label_display: visible
+  views_label: Tags
+  items_per_page: none
+visibility: {  }
