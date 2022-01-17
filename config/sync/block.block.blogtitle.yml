@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:b92b5e43-975c-41b6-932c-0868a5c88f80'
   module:
     - block_content
+    - system
   theme:
     - drupalastic
 id: blogtitle
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

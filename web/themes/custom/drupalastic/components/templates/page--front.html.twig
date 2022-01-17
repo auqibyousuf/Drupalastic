@@ -50,6 +50,7 @@
   </header>
   <main role="main">
     <div class="layout-content">
+      {{ page.content|without('views_block__our_services_block_1', 'views_block__slider_block_1', 'gmap', 'webform') }}
       {{ page.content.views_block__our_services_block_1 }}
       {{ page.content.views_block__slider_block_1 }}
       <div class="gmap-webform-block">
@@ -61,6 +62,7 @@
 
   {% if page.footer %}
     <footer role="contentinfo" class = "footer-container">
+      {{ page.footer|without('footerlogo', 'shortinfo', 'sociallinks', 'causae', 'aperiri', 'views_block__blog_block_1', 'created', 'copyright') }}
       <div class="footer">
         <div class="footer-primary">
           <div class="footer__left-block">

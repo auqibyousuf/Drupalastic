@@ -25,6 +25,8 @@
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/devel": "^4.1",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/paragraphs": "^1.12",
         "drupal/simple_gmap": "^3.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.1",

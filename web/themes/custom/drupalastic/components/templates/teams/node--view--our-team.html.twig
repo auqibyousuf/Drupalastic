@@ -70,36 +70,11 @@
  *   in different view modes.
  */
 #}
-<div class="blogs-content">
-  <div class="blogs__link">
-    {{ content.field_backlink }}
+<div class="teams-section">
+  <div class="teams-body">
+    <div class="teams-section__title">{{ content.field_teams_title.0 }}</div>
+    <div class="teams-section__subtitle">{{ content.field_team_subtitle.0 }}</div>
+    <div class="teams-section__discription">{{ content.field_teams_discription.0 }}</div>
   </div>
-  <div class="blogs__image">
-    <img src="{{ content['field_main'][0]['#markup'] }}"/>
-  </div>
-  <div class="blogs__cat-taxanomy">
-    {{ content.field_categories }}
-  </div>
-  <h2 class="blogs__title">
-    {{ content.field_blog_title.0['#context'].value }}
-  </h2>
-
-  <div class="blogs__author">
-    <div class="blogs__author-image">
-      <img src="{{ content.field_author_image[0]['#markup'] }}" />
-    </div>
-    <div class="blogs__author-name">
-      {{ content.field_author_name.0 }}
-    </div>
-    <div class="blogs__author-date">
-      {{ content.field_post_date.0['#markup'] }}
-    </div>
-  </div>
-
-  <div class="blogs__body">
-    {{ content.field_body.0 }}
-  </div>
-  <div class="blogs__tag-taxanomy">
-    {{ content.field_tag }}
-  </div>
-</div>
+  <div class="teams-section__teams">{{ content.field_our_teams }}</div>
+<div>

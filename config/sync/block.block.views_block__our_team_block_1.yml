@@ -1,22 +1,22 @@
-uuid: d5f0e321-58d0-4e50-91d0-6519ff5e36d2
+uuid: eedc964c-0e3c-4c0b-9e0a-e0b67f601179
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.tags_taxanomy
+    - views.view.our_team
   module:
     - system
     - views
   theme:
     - drupalastic
-id: views_block__tags_taxanomy_block_1
+id: views_block__our_team_block_1
 theme: drupalastic
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:tags_taxanomy-block_1'
+plugin: 'views_block:our_team-block_1'
 settings:
-  id: 'views_block:tags_taxanomy-block_1'
+  id: 'views_block:our_team-block_1'
   label: ''
   provider: views
   label_display: '0'
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false

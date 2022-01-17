@@ -1,0 +1,38 @@
+uuid: e5c56a9d-e3cc-4124-a213-324377a49b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mem
+    - paragraphs.paragraphs_type.teams
+  module:
+    - image
+id: paragraph.teams.field_mem
+field_name: field_mem
+entity_type: paragraph
+bundle: teams
+label: 'Member Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,19 @@
+uuid: 92f28ddd-e586-44fc-992e-9ae07560f849
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teams_title
+    - node.type.page
+id: node.page.field_teams_title
+field_name: field_teams_title
+entity_type: node
+bundle: page
+label: 'Teams Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
