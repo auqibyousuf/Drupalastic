@@ -1,0 +1,19 @@
+uuid: 6d07caa8-73e7-4c59-94bf-d2ce7b090019
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_member_designation
+    - paragraphs.paragraphs_type.teams
+id: paragraph.teams.field_member_designation
+field_name: field_member_designation
+entity_type: paragraph
+bundle: teams
+label: 'Member Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

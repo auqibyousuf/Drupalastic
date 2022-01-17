@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - search
+    - system
   theme:
     - drupalastic
 id: searchform
@@ -18,4 +19,8 @@ settings:
   provider: search
   label_display: '0'
   page_id: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

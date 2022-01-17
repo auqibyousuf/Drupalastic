@@ -9,6 +9,7 @@ global:
       dist/components/organisms/scss/components/contact.css: {}
       dist/components/organisms/scss/components/testimonials.css: {}
       dist/components/organisms/scss/components/blog-listing.css: {}
+      dist/components/organisms/scss/components/teams.css: {}
 
   js:
     dist/components/organisms/ts/navtoggle.js:

@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.blog_sidebar
   module:
+    - system
     - views
   theme:
     - drupalastic
@@ -21,4 +22,8 @@ settings:
   label_display: visible
   views_label: 'Recent Posts'
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

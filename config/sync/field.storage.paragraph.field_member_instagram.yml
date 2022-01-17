@@ -1,0 +1,19 @@
+uuid: 3c48f674-6045-4815-beef-c6b710f38de6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_member_instagram
+field_name: field_member_instagram
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

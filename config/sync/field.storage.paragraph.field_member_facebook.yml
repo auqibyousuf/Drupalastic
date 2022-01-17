@@ -1,0 +1,19 @@
+uuid: 503f78fd-4339-4ca0-a772-bd54ef63ac60
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_member_facebook
+field_name: field_member_facebook
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

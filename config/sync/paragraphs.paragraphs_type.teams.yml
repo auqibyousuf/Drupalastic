@@ -1,0 +1,10 @@
+uuid: b89e3967-acbd-45d5-98d8-e38b6faf9aaa
+langcode: en
+status: true
+dependencies: {  }
+id: teams
+label: Teams
+icon_uuid: null
+icon_default: null
+description: 'For Teams Section'
+behavior_plugins: {  }

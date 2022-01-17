@@ -1,0 +1,81 @@
+uuid: c1d8fa96-2796-431f-ae55-54c26934ce03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teams.field_mem
+    - field.field.paragraph.teams.field_member_designation
+    - field.field.paragraph.teams.field_member_facebook
+    - field.field.paragraph.teams.field_member_instagram
+    - field.field.paragraph.teams.field_member_name
+    - field.field.paragraph.teams.field_member_twitter
+    - paragraphs.paragraphs_type.teams
+  module:
+    - image
+    - link
+id: paragraph.teams.default
+targetEntityType: paragraph
+bundle: teams
+mode: default
+content:
+  field_mem:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_member_designation:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_member_facebook:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_member_instagram:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_member_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_member_twitter:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

@@ -1,0 +1,100 @@
+@import '../config.all';
+.teams-container {
+  display: flex;
+  justify-content: space-evenly;
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+  @include breakpoint($tablet) {
+    flex-wrap: wrap;
+  }
+}
+.teams-section {
+  background: var(--c-background);
+  padding: 50px;
+}
+.teams-body {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.teams-section__title {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding-bottom: 20px;
+}
+.teams-section__subtitle {
+  font-size: 56px;
+  margin-bottom: 30px;
+  line-height: 24px;
+  font-family: var(--f-secondary);
+}
+.teams-section__discription {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 36px;
+}
+
+.member-container {
+  background: var(--c-white);
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+  width: 370px;
+  height: 480px;
+  @include breakpoint($tablet) {
+    margin-top: 30px;
+  }
+}
+
+.member-header {
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--c-grey-light);
+}
+
+.member-item__image {
+  text-align: center;
+  img {
+    margin-top: 33px;
+    margin-bottom: 20px;
+  }
+}
+
+.member-item__name {
+  font-family: var(--f-secondary);
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 24px;
+}
+
+.member-footer {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.member-social {
+  display: flex;
+}
+
+.member-item-social__facebook,
+.member-item-social__twitter,
+.member-item-social__instagram {
+  a {
+    width: 28px;
+    height: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+  }
+  a[href*='facebook'] {
+    background-image: url(/themes/custom/drupalastic/images/facebook.png);
+  }
+  a[href*='instagram'] {
+    background-image: url(/themes/custom/drupalastic/images/instagram.png);
+  }
+  a[href*='twitter'] {
+    background-image: url(/themes/custom/drupalastic/images/twitter.png);
+  }
+}
+.member-item__designation {
+  color: var(--c-grey);
+}

@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_our_teams
+    - field.field.node.page.field_team_subtitle
+    - field.field.node.page.field_teams_discription
+    - field.field.node.page.field_teams_title
     - node.type.page
   module:
-    - text
+    - entity_reference_revisions
     - user
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -15,14 +18,42 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
+  field_our_teams:
+    type: entity_reference_revisions_entity_view
+    weight: 4
     label: hidden
-    type: text_default
-    weight: 100
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_team_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teams_discription:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teams_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 101
-    region: content
 hidden: {  }
