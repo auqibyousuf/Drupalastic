@@ -1,0 +1,62 @@
+uuid: bb79cd8d-13f8-4234-b3e1-2b9286ace0b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_data.body
+    - field.field.node.portfolio_data.field_date
+    - field.field.node.portfolio_data.field_impetus
+    - field.field.node.portfolio_data.field_ocurreret
+    - field.field.node.portfolio_data.field_percipit
+    - node.type.portfolio_data
+  module:
+    - datetime
+    - text
+    - user
+id: node.portfolio_data.default
+targetEntityType: node
+bundle: portfolio_data
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd M Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_impetus:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ocurreret:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_percipit:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  links: true

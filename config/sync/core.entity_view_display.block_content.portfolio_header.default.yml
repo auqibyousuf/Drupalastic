@@ -1,0 +1,60 @@
+uuid: 466d7f8d-4258-4254-a949-cf83754f4efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_header
+    - field.field.block_content.portfolio_header.body
+    - field.field.block_content.portfolio_header.field_back_link
+    - field.field.block_content.portfolio_header.field_discription
+    - field.field.block_content.portfolio_header.field_title
+    - field.field.block_content.portfolio_header.field_visit
+  module:
+    - link
+id: block_content.portfolio_header.default
+targetEntityType: block_content
+bundle: portfolio_header
+mode: default
+content:
+  field_back_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_discription:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_visit:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  body: true

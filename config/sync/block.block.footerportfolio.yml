@@ -1,0 +1,30 @@
+uuid: 8e344501-6740-4e34-9ce1-da025954cacc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:portfolio_footer:bd098f85-76f1-4575-be2e-685c6b90e6a5'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalastic
+id: footerportfolio
+theme: drupalastic
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:bd098f85-76f1-4575-be2e-685c6b90e6a5'
+settings:
+  id: 'block_content:bd098f85-76f1-4575-be2e-685c6b90e6a5'
+  label: Portfolio-Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

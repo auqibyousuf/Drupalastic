@@ -1,0 +1,8 @@
+uuid: 0181be01-5eb4-48b2-9fef-3d31301869d8
+langcode: en
+status: true
+dependencies: {  }
+id: portfolio_footer
+label: 'Portfolio Footer'
+revision: 1
+description: ''

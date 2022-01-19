@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.taxonomy_categories
   module:
-    - system
     - views
   theme:
     - drupalastic
@@ -22,8 +21,4 @@ settings:
   label_display: visible
   views_label: Categories
   items_per_page: none
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
+visibility: {  }

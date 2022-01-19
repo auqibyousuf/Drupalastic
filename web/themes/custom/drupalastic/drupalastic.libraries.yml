@@ -10,10 +10,12 @@ global:
       dist/components/organisms/scss/components/testimonials.css: {}
       dist/components/organisms/scss/components/blog-listing.css: {}
       dist/components/organisms/scss/components/teams.css: {}
+      dist/components/organisms/scss/components/portfolio.css: {}
 
   js:
     dist/components/organisms/ts/navtoggle.js:
     dist/components/organisms/ts/testimonials.js:
+    dist/components/organisms/ts/portfolio.js:
   dependencies:
     - drupalastic/slick
 

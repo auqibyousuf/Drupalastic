@@ -4,3 +4,18 @@
  * @file
  * Functions to support theming in the drupalastic theme.
  */
+function drupalastic_theme_suggestions_page_alter(array &$suggestions, array $variables)
+  {
+    if ($node= \Drupal::request()->attributes->get('node'))
+    {
+      if (is_object($node))
+      {
+        $suggestions[]= 'page__' . $node->getType();
+      }
+    }
+  }
+
+function drupalastic_theme_suggestions_region_alter(array &$suggestions, array $variables)
+  {
+    $suggestions[] = 'region__drupalastic';
+  }

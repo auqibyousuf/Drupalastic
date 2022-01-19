@@ -1,0 +1,18 @@
+uuid: 08043fde-505f-422b-8f80-8ba297e02957
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:21ea7eed-7349-4d45-bae3-0e02d073d732'
+name: 'Portfolio Data'
+type: portfolio_data
+description: 'For Adding Data'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

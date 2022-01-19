@@ -1,0 +1,21 @@
+uuid: c8cbd8ef-f2b5-45db-9bb4-39de187acf40
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_footer
+    - field.storage.block_content.field_percipit
+  module:
+    - text
+id: block_content.portfolio_footer.field_percipit
+field_name: field_percipit
+entity_type: block_content
+bundle: portfolio_footer
+label: Percipit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

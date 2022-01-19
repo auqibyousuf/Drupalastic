@@ -50,7 +50,7 @@
   </header>
   <main role="main">
     <div class="layout-content">
-      {{ page.content|without('views_block__our_services_block_1', 'views_block__slider_block_1', 'gmap', 'webform') }}
+      {{ page.content|without('views_block__our_team_block_1', 'views_block__slider_block_1', 'gmap', 'webform', 'system_main') }}{{ dsm(page.content) }}
       {{ page.content.views_block__our_services_block_1 }}
       {{ page.content.views_block__slider_block_1 }}
       <div class="gmap-webform-block">

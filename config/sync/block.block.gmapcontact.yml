@@ -11,7 +11,7 @@ dependencies:
 id: gmapcontact
 theme: drupalastic
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:f28d87b6-b5ee-4e59-979c-e543175a2a4a'
 settings:

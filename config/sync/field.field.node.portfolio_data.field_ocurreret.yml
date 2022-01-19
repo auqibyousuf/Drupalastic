@@ -1,0 +1,19 @@
+uuid: 8e13beb0-6694-4f36-bb3e-633ef016b3a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ocurreret
+    - node.type.portfolio_data
+id: node.portfolio_data.field_ocurreret
+field_name: field_ocurreret
+entity_type: node
+bundle: portfolio_data
+label: Ocurreret
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

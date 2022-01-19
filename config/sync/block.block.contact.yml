@@ -12,7 +12,7 @@ dependencies:
 id: contact
 theme: drupalastic
 region: content
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:41055665-e6a9-4ed7-ad31-1a0a33d06261'
 settings:

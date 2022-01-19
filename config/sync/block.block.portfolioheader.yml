@@ -1,0 +1,30 @@
+uuid: 0b8a8148-5bf3-4321-bd44-a72942d7fa07
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:portfolio_header:911eee98-7384-44da-ae5b-18615393ea95'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalastic
+id: portfolioheader
+theme: drupalastic
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:911eee98-7384-44da-ae5b-18615393ea95'
+settings:
+  id: 'block_content:911eee98-7384-44da-ae5b-18615393ea95'
+  label: Portfolio-Header
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

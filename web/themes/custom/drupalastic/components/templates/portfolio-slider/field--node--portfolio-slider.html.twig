@@ -36,4 +36,22 @@
  * @see template_preprocess_field()
  */
 #}
-{{ items }}
+<div{{ attributes.addClass("portfolio-container") }}>
+  <div class="portfolio-main">
+  {% for item in items %}
+    <div{{ item.attributes }}>
+      {{ item.content }}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="portfolio-teaser">
+  {% for item in items %}
+    <div{{ item.attributes }}>
+      {{ item.content }}
+    </div>
+  {% endfor %}
+</div>
+
+
+</div>

@@ -1,0 +1,57 @@
+uuid: 11d971cb-7e50-400f-aa42-0da7ecc9da90
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_footer
+    - field.field.block_content.portfolio_footer.body
+    - field.field.block_content.portfolio_footer.field_date
+    - field.field.block_content.portfolio_footer.field_impetus
+    - field.field.block_content.portfolio_footer.field_ocurreret
+    - field.field.block_content.portfolio_footer.field_percipit
+  module:
+    - datetime
+    - text
+id: block_content.portfolio_footer.default
+targetEntityType: block_content
+bundle: portfolio_footer
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_impetus:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ocurreret:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_percipit:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

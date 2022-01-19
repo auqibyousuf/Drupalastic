@@ -12,7 +12,7 @@ dependencies:
 id: blogtitle
 theme: drupalastic
 region: content
-weight: 0
+weight: -8
 provider: null
 plugin: 'block_content:b92b5e43-975c-41b6-932c-0868a5c88f80'
 settings:
