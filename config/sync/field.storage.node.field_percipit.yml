@@ -1,0 +1,21 @@
+uuid: 3ba0a5ef-911e-40b3-9186-de4660cf74e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_percipit
+field_name: field_percipit
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

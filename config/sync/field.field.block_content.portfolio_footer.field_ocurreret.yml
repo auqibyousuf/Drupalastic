@@ -1,0 +1,21 @@
+uuid: f8b4db53-97d0-4b21-b4d6-dc8e8847cf16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_footer
+    - field.storage.block_content.field_ocurreret
+  module:
+    - text
+id: block_content.portfolio_footer.field_ocurreret
+field_name: field_ocurreret
+entity_type: block_content
+bundle: portfolio_footer
+label: Ocurreret
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

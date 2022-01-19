@@ -1,0 +1,23 @@
+uuid: 1c7e7513-39e7-4caf-9264-a3479064a5b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_header
+    - field.storage.block_content.field_visit
+  module:
+    - link
+id: block_content.portfolio_header.field_visit
+field_name: field_visit
+entity_type: block_content
+bundle: portfolio_header
+label: Visit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

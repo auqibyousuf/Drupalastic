@@ -1,0 +1,21 @@
+uuid: e82b22c6-ffb5-4d53-a917-3f6dfab8c221
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.portfolio_data
+  module:
+    - datetime
+id: node.portfolio_data.field_date
+field_name: field_date
+entity_type: node
+bundle: portfolio_data
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

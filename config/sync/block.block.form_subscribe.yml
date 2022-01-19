@@ -12,7 +12,7 @@ dependencies:
 id: form_subscribe
 theme: drupalastic
 region: content
-weight: -4
+weight: -11
 provider: null
 plugin: webform_block
 settings:

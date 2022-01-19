@@ -1,0 +1,23 @@
+uuid: 4c44149a-ca83-4a92-9aca-1df2835d4313
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.portfolio_header
+    - field.storage.block_content.field_back_link
+  module:
+    - link
+id: block_content.portfolio_header.field_back_link
+field_name: field_back_link
+entity_type: block_content
+bundle: portfolio_header
+label: 'Back Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

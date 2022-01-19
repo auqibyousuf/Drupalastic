@@ -1,0 +1,22 @@
+uuid: 47f04985-7317-4ccd-9346-a215df700bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_slider.field_image_1
+    - node.type.portfolio_slider
+  module:
+    - user
+id: node.portfolio_slider.teaser
+targetEntityType: node
+bundle: portfolio_slider
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image_1: true

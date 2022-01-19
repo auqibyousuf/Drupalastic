@@ -1,0 +1,19 @@
+uuid: 724ec90a-d5d9-4015-a240-acb6ef79ffbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impetus
+    - node.type.portfolio_data
+id: node.portfolio_data.field_impetus
+field_name: field_impetus
+entity_type: node
+bundle: portfolio_data
+label: Impetus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

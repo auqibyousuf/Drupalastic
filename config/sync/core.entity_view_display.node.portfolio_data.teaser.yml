@@ -1,0 +1,38 @@
+uuid: 31a7b8e8-916e-4b49-8643-a9009ba794b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_data.body
+    - field.field.node.portfolio_data.field_date
+    - field.field.node.portfolio_data.field_impetus
+    - field.field.node.portfolio_data.field_ocurreret
+    - field.field.node.portfolio_data.field_percipit
+    - node.type.portfolio_data
+  module:
+    - text
+    - user
+id: node.portfolio_data.teaser
+targetEntityType: node
+bundle: portfolio_data
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_date: true
+  field_impetus: true
+  field_ocurreret: true
+  field_percipit: true

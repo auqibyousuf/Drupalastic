@@ -12,7 +12,7 @@ dependencies:
 id: author
 theme: drupalastic
 region: content
-weight: -7
+weight: -13
 provider: null
 plugin: 'block_content:d6662f97-6b25-4a94-bd33-7eccda913924'
 settings:
